@@ -18,13 +18,13 @@ My name is Chukwuemeka Emmanuel Mordi, just Mordi is good. I'm currently a Junio
 
 # Research
 
- - [Quantum Light Microscope](https://github.com/qt3uw) - a program to enable hyperspectral imaging on a quantum light microscope. 
+ - [Quantum Light Microscope](https://github.com/qt3uw) - Working on program to enable hyperspectral imaging on a quantum light microscope. 
 
 # Some Projects
 
- - [Caesar Cipher](https://github.com/cmordi/caesar_cipher) - Tool I built to help brute force Caesar Ciphers because I got bored. Could use in CTF's (no, I dont really participate in CTF's, maybe in a few months).
+ - [Caesar Cipher](https://github.com/cmordi/caesar_cipher) - Tool I built to help brute force Caesar Ciphers because I got bored. Could be useful for CTF's (maybe i'll get started on ctf's in a few months. research is my main focus right now tbh).
 
- - [Monkeypox](https://github.com/cmordi/monkeypox) - Some exploratory data analysis I attempted to do on the monkeypox outbreak. Got bored so I wanted to flaunt my data science "skills".
+ - [Monkeypox](https://github.com/cmordi/monkeypox) - Some exploratory data analysis I attempted on the monkeypox outbreak. Got bored so I wanted to flaunt my data science "skills" lmao.
 
  - [Housing data pipeline](https://github.com/cmordi/redfin-pipeline) -
     Did this because I wanted to learn about the implementation of ML models and predictive analysis. All this project did was just make me more skeptical about ML, i'll talk about that another time. It's still in progress but it needs to be put up here since it taught me a very important lesson.
