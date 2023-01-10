@@ -18,7 +18,7 @@ My name is Chukwuemeka Emmanuel Mordi, just Mordi is good. I'm currently a Junio
 
 # Research
 
- - [Quantum Light Processor](https://github.com/qt3uw) - a program to enable hyperspectral imaging on a quantum light microscope. 
+ - [Quantum Light Microscope](https://github.com/qt3uw) - a program to enable hyperspectral imaging on a quantum light microscope. 
 
 # Some Projects
 
