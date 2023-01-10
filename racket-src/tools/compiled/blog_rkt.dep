@@ -1,0 +1,1 @@
+("8.5" ta6le ("c5acd53355dfe6a28a0fa9976849901bb6209385" . "567e68991fa2d7c07ac0d42e9f93c16099f9a66b") #"/home/bsaiki/projects/website/tools/common.rkt" #"/home/bsaiki/projects/website/tools/data.rkt" (collects #"markdown" #"main.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"xml" #"main.rkt"))
