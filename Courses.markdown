@@ -8,7 +8,7 @@ Some info about what i've done in college. The hyperlinks may take you to outdat
 
 (this only contains my junior courses and will contain my senior courses next fall. everything here is my opinion)
 
-Fall 2022]
+Fall 2022
 
  - [Intro to Database Systems](https://sites.google.com/cs.washington.edu/cse414-22au) -
     straight forward class. the professor was passionate about the work, weekly assignments weren't difficult. the final was even easier
@@ -28,7 +28,7 @@ Winter 2023
 
  - Intermediate Programming Concepts and Tools
 
- - Signal Processing (Part 1)
+ - Signal Processing I
 
  - Computer Hardware Skills
 
