@@ -6,7 +6,7 @@ permalink: /Courses/
 
 Some info about what i've done in college. The hyperlinks may take you to outdated iterations of the course but it's just to provide an example on the course material.
 
-(this only contains my junior courses and will contain my senior courses next fall. everything here is my opinion)
+(this only contains my junior year courses since my first two years of college wasn't too interesting. everything here is just my opinion, don't be mad)
 
 Fall 2022
 
@@ -20,7 +20,7 @@ Fall 2022
     the class was ok. felt like the professor veered off the path of main point of the class a few times. the work was often tedious but nothing too mind numbing. had to take it to satisfy a requirement so it is what it is
 
  - [Programming for Signal and Information Processing](https://myplan.uw.edu/course/#/courses/E%20E241) -
-    really interesting class even thoough we only met once a week. the professor was chill. we sped through a lot of topics due to time constraints but the homework assignments forced us to think critically which made things engaging 
+    lab based class. wish i attended more lectures. we sped through a lot of topics (i already knew them so i wasn't bothered). the homework was moderately difficult so i appreciated the professor's attempt to make things interesting
 
 Winter 2023
 
