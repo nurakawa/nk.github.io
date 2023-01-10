@@ -20,7 +20,7 @@ Fall 2022
     the class was ok. felt like the professor veered off the path of main point of the class a few times. the work was often tedious but nothing too mind numbing. had to take it to satisfy a requirement so it is what it is
 
  - [Programming for Signal and Information Processing](https://myplan.uw.edu/course/#/courses/E%20E241) -
-    lab based class. wish i attended more lectures. we sped through a lot of topics (i already knew them so i wasn't bothered). the homework was moderately difficult so i appreciated the professor's attempt to make things interesting
+    lab based class. wish i attended more lectures. we sped through a lot of topics (i already knew them so i wasn't bothered). the homework was moderately difficult so i appreciated the professor's attempt to make the class challenging 
 
 Winter 2023
 
