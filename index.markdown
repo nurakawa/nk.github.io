@@ -6,62 +6,31 @@ layout: page
 title: null
 ---
 
-![My Picture](assets/bsaiki.jpg){: style="display:block; margin-left:auto; margin-right:auto; height: 300px"}
+![My Picture](assets/pic.jpg){: style="display:block; margin-left:auto; margin-right:auto; height: 300px"}
 
 # About
 
-My name is Brett Saiki.
-I am a fourth-year undergraduate student at the University of Washington
-  double-majoring in computer engineering and mathematics.
-I am do research on computer number systems and term-rewriting techniques
-  alongside my advisers [Zach Tatlock](https://homes.cs.washington.edu/~ztatlock/)
-  and [Pavel Panchekha](https://pavpanchekha.com/).
-I currently work on projects like Herbie, Ruler, and FPBench.
+My name is Chukwuemeka Emmanuel Mordi, but Mordi is good. I'm currently a Junior in Electrical and Computer Engineering at the University of Washington in Seattle. I’m currently an undergraduate researcher at the [QT3 Lab](https://sites.google.com/uw.edu/qt3-lab/home) working on developing software for hyperspectral imaging on a quantum light microscope alongside my advisers [Dr. Max Parsons](https://people.ece.uw.edu/parsons_max/) and [Prof. Kai-Mei Fu](https://phys.washington.edu/people/kai-mei-fu). This summer i'll be interning at Amazon as a Software Engineering intern mainly focused on business data and intelligence. I have plans of going to grad school so I guess we'll see how that goes... 
 
-[Resume](assets/resume.pdf) -
-[LinkedIn](https://linkedin.com/in/brettsaiki) -
-[GitHub](https://github.com/bksaiki)
+[Resume](assets/C_Mordi_Resume.pdf) -
+[LinkedIn](https://linkedin.com/in/chukwuemeka-mordi) -
+[GitHub](https://github.com/cmordi)
 
 # Research
 
- - [Herbie](https://github.com/herbie-fp/herbie) - a tool for minimizing error
-    in floating-point expressions.
+ - [Quantum Light Processor](https://github.com/qt3uw) - a program to enable hyperspectral imaging on a quantum light microscope. 
 
- - [FPBench](https://github.com/FPBench/FPBench) - a collection of benchmarks,
-    compilers, and standards for the floating-point research community.
+# Some Projects
 
- - [Ruler](https://github.com/uwplse/ruler) - a framework for synthesizing
-    rewrite rules for a particular domain.
+ - [Caesar Cipher](https://github.com/cmordi/caesar_cipher) - tool i built to help brute force caesar ciphers bc i got bored. could use in ctf's (no, i dont really participate in ctf's, maybe in a few months)
 
-# Publications
+ - [Monkeypox](https://github.com/cmordi/monkeypox) - some exploratory data analysis i attempted to do on the monkeypox outbreak. got bored so i wanted to flex my data science skills
 
-**Rewrite Rule Inference Using Equality Saturation**  
-Chandrakana Nandi, Max Willsey, Amy Zhu, Brett Saiki, Yisu Wang,
-Adam Anderson, Adriana Schulz, Dan Grossman, Zachary Tatlock  
-Object-Oriented Programming, Systems, Languages & Applications (OOPSLA) 2021  
-_Distinguished Paper Award_  
-[Paper](https://arxiv.org/pdf/2108.10436.pdf)
-
-**Combining Precision Tuning and Rewriting**  
-Brett Saiki, Oliver Flatt, Chandrakana Nandi, Pavel Panchekha, Zachary Tatlock  
-IEEE Symposium on Computer Arithmetic (ARITH) 2021  
-[Paper](https://herbie.uwplse.org/arith21-paper.pdf) -
-[Talk](https://youtu.be/ytWhp0I8KVw)
-
-# Side Projects
-
- - [Minim](https://github.com/bksaiki/Minim) - a Scheme-like language inspired by recent work in Racket.
-
- - [ENL](https://github.com/bksaiki/ENL) - a library of alternate number systems written in C.
-    Currently supports quad-double."
-
- - [generic-flonum](https://docs.racket-lang.org/generic-flonum/index.html) -
-    Racket interface for MPFR that supports subnormal numbers and variable exponent sizes.
+ - [housing data pipeline](https://github.com/cmordi/redfin-pipeline) -
+    i did not attempt this one bc i was bored. just wanted simply curious and wanted to learn abou ML models. project still isnt finished but i'm more focused on making sure i understand the concepts
 
 # Resources
 
- - [FPBench community](https://fpbench.org) - FPBench, FPCore, number systems, and more.
-    Please start here if you want to know more about the FPBench Project.
+ - [Info on reserach interests](https://www.quantumx.washington.edu/research/) - this might change but right now i would say that my research interests currently lie in the realm of developing tools that will aid in the process of quantum computing. the link can hopefully provide more info on all things quantum at my school 
   
- - [Herbie web demo](https://herbie.uwplse.org/demo) - an interactive page
-    that runs programs through Herbie. Try it out!
+Note: I will update the resources section at a later stage with guess what, more resources!
