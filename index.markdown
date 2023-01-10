@@ -22,15 +22,15 @@ My name is Chukwuemeka Emmanuel Mordi, just Mordi is good. I'm currently a Junio
 
 # Some Projects
 
- - [Caesar Cipher](https://github.com/cmordi/caesar_cipher) - Tool I built to help brute force Caesar Ciphers bc I got bored. Could use in CTF's (no, I dont really participate in CTF's, maybe in a few months).
+ - [Caesar Cipher](https://github.com/cmordi/caesar_cipher) - Tool I built to help brute force Caesar Ciphers because I got bored. Could use in CTF's (no, I dont really participate in CTF's, maybe in a few months).
 
- - [Monkeypox](https://github.com/cmordi/monkeypox) - Some exploratory data analysis I attempted to do on the monkeypox outbreak. Got bored so I wanted to flex my data science skills.
+ - [Monkeypox](https://github.com/cmordi/monkeypox) - Some exploratory data analysis I attempted to do on the monkeypox outbreak. Got bored so I wanted to flaunt my data science "skills".
 
  - [Housing data pipeline](https://github.com/cmordi/redfin-pipeline) -
     Did this because I wanted to learn about the implementation of ML models and predictive analysis. All this project did was just make me more skeptical about ML, i'll talk about that another time. It's still in progress but it needs to be put up here since it taught me a very important lesson.
 
 # Resources
 
- - [Info on reserach interests](https://www.quantumx.washington.edu/research/) - This might change but right now my research interests currently lie in the realm of developing software that aids quantum computing systems. The link can hopefully provide more info on all things quantum at my school.
+ - [Info on research](https://www.quantumx.washington.edu/research/) - This may change but for now my research interests lie in the realm of developing software that aids quantum computing systems.
   
 Note: I will update the resources section at a later stage with guess what, more resources!
