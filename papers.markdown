@@ -1,31 +1,35 @@
 ---
 layout: page
-title: Papers
+title: School
 permalink: /papers/
 ---
 
-An archive of short papers, class notes, and more.
+Some info about what i've done in college. The hyperlinks may take you to outdated iterations of the course but it's just to provide an example on the course material.
 
- - [Abstract Algebra](papers/hungerford/algebra.pdf) -
-    abstract algebra notes from MATH 402/403 at UW
+(this only contains my junior courses and will contain my senior courses next fall. everything here is my opinion)
 
- - [Complex Analysis](papers/gamelin/complex-analysis.pdf) -
-    complex analysis notes from MATH 336 at UW
+[Fall 2022]{.ul}
 
- - [Computer Number Systems](papers/computer_numbers_systems/paper.pdf) -
-    paper on computer number systems (written for MATH 336)
+ - [Intro to Database Systems](https://sites.google.com/cs.washington.edu/cse414-22au) -
+    straight forward class. the professor was passionate about the work, weekly assignments weren't difficult. the final was even easier
 
- - [Computer-Automated Rewriting](papers/rewriting_blog/rewriting.pdf) -
-    paper on computer-aided rewriting (written for ENGR 231)
+ - [Digital Circuits And Systems](https://class.ece.uw.edu/271/hauck2/) -
+    hardest class i've ever taken in college. be prepared to grind out 100's of lines of system verilog code every other day. really harsh grading
 
- - [Construction of Numbers](papers/construction_of_numbers/construction_of_numbers.pdf) -
-    constructing numbers from first principles
+ - [Inclusive Design and Engineering](https://myplan.uw.edu/course/#/courses/HCDE315) -
+    the class was ok. felt like the professor veered off the path of main point of the class a few times. the work was often tedious but nothing too mind numbing. had to take it to satisfy a requirement so it is what it is
 
- - [Numerical Analysis](papers/numerical-analysis/numerical-analysis.pdf) -
-    numerical analysis notes from MATH 464/465 at UW
+ - [Programming for Signal and Information Processing](https://myplan.uw.edu/course/#/courses/E%20E241) -
+    really interesting class even thoough we only met once a week. the professor was chill. we sped through a lot of topics due to time constraints but the homework assignments forced us to think critically which made things engaging 
 
- - [Probability](papers/probability/probability.pdf) -
-    probability notes from MATH/STAT 394 at UW
+[Winter 2023]{.ul}
 
- - [Real Analysis](papers/folland/real-analysis.pdf) -
-    real analysis notes from MATH 334/335 at UW
+ - Data Structures and Algorithms 
+
+ - Intermediate Programming Concepts and Tools
+
+ - Signal Processing (Part 1)
+
+ - Computer Hardware Skills
+
+ 
