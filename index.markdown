@@ -26,7 +26,7 @@ My name is Chukwuemeka Emmanuel Mordi, just Mordi is good. I'm currently a Junio
 
  - [Monkeypox](https://github.com/cmordi/monkeypox) - Some exploratory data analysis I attempted on the monkeypox outbreak. Got bored so I wanted to flaunt my data science "skills" lmao.
 
- - [Housing data pipeline](https://github.com/cmordi/redfin-pipeline) -
+ - [Housing Pipeline](https://github.com/cmordi/redfin-pipeline) -
     Did this because I wanted to learn about the implementation of ML models and predictive analysis. All this project did was just make me more skeptical about ML, i'll talk about that another time. It's still in progress but it needs to be put up here since it taught me a very important lesson.
 
 # Resources
