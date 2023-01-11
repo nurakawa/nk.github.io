@@ -1,5 +1,5 @@
 # Personal Website
 live at https://cmordi.github.io/ 
 
-pls let me know if anything is broken 👨🏾‍🔧
+the alpha version of this project took me 10 hours straight to code. i've refactored it since then but pls me know if anything is broken 👨🏾‍🔧
 
