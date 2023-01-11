@@ -8,7 +8,7 @@ Some info about what I’ve done in college. The hyperlinks may take you to outd
 
 (this only contains my junior year courses since my first two years of college weren’t too interesting. everything here is just my opinion, don’t be mad)
 
-Fall 2022
+__Fall 2022__
 
  - [Intro to Database Systems](https://sites.google.com/cs.washington.edu/cse414-22au) -
     straightforward class. the professor was passionate about the work, weekly assignments weren't difficult. the final was even easier
@@ -22,7 +22,7 @@ Fall 2022
  - [Programming for Signal and Information Processing](https://myplan.uw.edu/course/#/courses/E%20E241) -
     lab based class. wish I attended more lectures. we sped through a lot of topics (I already knew them so I wasn't bothered). the homework was moderately difficult so I appreciated the professor's attempt to make the class challenging 
 
-Winter 2023
+__Winter 2023__
 
  - Data Structures and Algorithms 
 
