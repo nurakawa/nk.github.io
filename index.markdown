@@ -18,7 +18,7 @@ My name is Chukwuemeka Emmanuel Mordi, just Mordi is good. I'm currently a Junio
 
 # Research
 
- - [Quantum Light Microscope](https://github.com/qt3uw) - Developing software to enable hyperspectral imaging on a quantum light microscope. 
+ - [Quantum Light Microscope](https://github.com/qt3uw) - Developing software to enable hyperspectral imaging on a quantum light microscope. Which is a confocal microscope designed for the analysis of light from single quantum emitters at room temperature, such as spin-defects in materials and quantum dots.
 
 # Some Projects
 
@@ -31,6 +31,6 @@ My name is Chukwuemeka Emmanuel Mordi, just Mordi is good. I'm currently a Junio
 
 # Resources
 
- - [Info on research](https://www.quantumx.washington.edu/research/) - This may change but for now my research interests lie in the realm of developing software that aids quantum computing systems.
+ - [Info on research](https://www.quantumx.washington.edu/research/) - This may change but for now my research interests lie in the realm of developing software related to quantum information. 
   
 Note: I will update the resources section at a later stage with guess what, more resources!
