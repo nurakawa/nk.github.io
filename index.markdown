@@ -6,11 +6,11 @@ layout: page
 title: null
 ---
 
-![My Picture](assets/pic.jpg){: style="display:block; margin-left:auto; margin-right:auto; height: 300px"}
+<!--- ![My Picture](assets/pic.jpg){: style="display:block; margin-left:auto; margin-right:auto; height: 300px"} -->
 
 # About
 
-My name is Chukwuemeka Emmanuel Mordi, just Mordi is good. I'm currently a Junior in Electrical and Computer Engineering at the University of Washington in Seattle. I’m also an undergraduate researcher at the [QT3 Lab](https://sites.google.com/uw.edu/qt3-lab/home) working on developing software for hyperspectral imaging on a quantum light microscope alongside my advisors [Max Parsons](https://people.ece.uw.edu/parsons_max/) and [Kai-Mei Fu](https://phys.washington.edu/people/kai-mei-fu). Later this year I'll be working at Amazon as a Software Engineering Intern mainly focused on business data and intelligence. I have plans of going to grad school so I guess we'll see how that goes... 
+My name is Chukwuemeka Emmanuel Mordi, just Mordi is good. I'm currently a Junior in Electrical and Computer Engineering at the University of Washington in Seattle. I’m also an undergraduate researcher at the [QT3 Lab](https://sites.google.com/uw.edu/qt3-lab/home) working on developing software for hyperspectral imaging on a quantum light microscope alongside my advisors [Max Parsons](https://people.ece.uw.edu/parsons_max/) and [Kai-Mei Fu](https://phys.washington.edu/people/kai-mei-fu). Later this year I'll be working at Amazon as a Software Engineering Intern mainly focused on business data and intelligence.
 
 [Resume](assets/MordiResume.pdf) -
 [LinkedIn](https://linkedin.com/in/chukwuemeka-mordi) -
