@@ -8,7 +8,6 @@ title: null
 
 <!--- ![My Picture](assets/pic.jpg){: style="display:block; margin-left:auto; margin-right:auto; height: 300px"} -->
 
-# About
 
 My name is Chukwuemeka Emmanuel Mordi, just Mordi is good. I'm currently a Junior in Electrical and Computer Engineering at the University of Washington in Seattle. I’m also an undergraduate researcher at the [QT3 Lab](https://sites.google.com/uw.edu/qt3-lab/home) working on developing software for hyperspectral imaging on a quantum light microscope alongside my advisors [Max Parsons](https://people.ece.uw.edu/parsons_max/) and [Kai-Mei Fu](https://phys.washington.edu/people/kai-mei-fu). Later this year I'll be working at Amazon as a Software Engineering Intern mainly focused on business data and intelligence.
 
@@ -16,11 +15,11 @@ My name is Chukwuemeka Emmanuel Mordi, just Mordi is good. I'm currently a Junio
 [LinkedIn](https://linkedin.com/in/chukwuemeka-mordi) -
 [GitHub](https://github.com/cmordi)
 
-# Research
+# research
 
  - [Quantum Light Microscope](https://github.com/qt3uw) - Developing software to enable hyperspectral imaging on a quantum light microscope. Which is a confocal microscope designed for the analysis of light from single quantum emitters at room temperature, such as spin-defects in materials and quantum dots.
 
-# Some Projects
+# projects
 
  - [Caesar Cipher](https://github.com/cmordi/caesar_cipher) - Tool I built to help brute force Caesar Ciphers because I got bored. Could be used in CTFs (maybe I’ll compete in a few months. research is my main focus right now tbh).
 
@@ -29,7 +28,7 @@ My name is Chukwuemeka Emmanuel Mordi, just Mordi is good. I'm currently a Junio
  - [Housing Pipeline](https://github.com/cmordi/redfin-pipeline) -
     Did this because I wanted to learn about the implementation of ML models and predictive analysis. All this project did was just make me more ML skeptic, I'll talk about that another time. It's still in progress but it needs to be put up here since it taught me a very important lesson.
 
-# Resources
+# resources
 
  - [Info on research](https://www.quantumx.washington.edu/research/) - This may change but for now my research interests lie in the realm of developing software related to quantum information. 
   
