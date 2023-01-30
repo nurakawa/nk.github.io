@@ -18,14 +18,13 @@ My name is Chukwuemeka Emmanuel Mordi, just Mordi is good. I'm currently a Junio
 
 # research
 
- - [Quantum Light Microscope](https://github.com/qt3uw) - Developing software to enable hyperspectral imaging on a quantum light microscope. Which is a confocal microscope designed for the analysis of light from single quantum emitters at room temperature, such as spin-defects in materials and quantum dots.
+- [Quantum Light Microscope](https://github.com/qt3uw) - Developing software to enable hyperspectral imaging on a quantum light microscope. Which is a confocal microscope designed for the analysis of light from single quantum emitters at room temperature, such as spin-defects in materials and quantum dots.
 
 # projects
 
- - [Caesar Cipher](https://github.com/cmordi/caesar_cipher) - Tool I built to help brute force Caesar Ciphers because I got bored. Could be used in CTFs (maybe I’ll compete in a few months. research is my main focus right now tbh).
+- [Caesar Cipher](https://github.com/cmordi/caesar_cipher) - Tool I built to help brute force Caesar Ciphers because I got bored. Could be used in CTFs (maybe I’ll compete in a few months. research is my main focus right now tbh).
 
- - [Monkeypox](https://github.com/cmordi/monkeypox) - Some exploratory data analysis on the monkeypox outbreak. My summer was dull so I wanted to refine my data science "skills" lmao.
+- [Monkeypox](https://github.com/cmordi/monkeypox) - Some exploratory data analysis on the monkeypox outbreak. My summer was dull so I wanted to refine my data science "skills" lmao.
 
- - [Housing Pipeline](https://github.com/cmordi/redfin-pipeline) -
-    Attempted this because I wanted to learn about the implementation of ML models and predictive analysis. It's still in progress.
+- [Housing Pipeline](https://github.com/cmordi/redfin-pipeline) - Attempted this because I wanted to learn about the implementation of ML models and predictive analysis. It's still in progress.
 
