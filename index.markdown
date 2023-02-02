@@ -10,7 +10,7 @@ title: null
 
 # about me
 
-My name is Chukwuemeka Emmanuel Mordi, just Mordi is good. I'm currently a Junior in Electrical and Computer Engineering at the University of Washington in Seattle. I’m also an undergraduate researcher at the [QT3 Lab](https://sites.google.com/uw.edu/qt3-lab/home) working on developing software for hyperspectral imaging on a quantum light microscope alongside my advisors [Max Parsons](https://people.ece.uw.edu/parsons_max/) and [Kai-Mei Fu](https://phys.washington.edu/people/kai-mei-fu). Later this year I'll be working at Amazon as a Software Engineering Intern mainly focused on business data and intelligence.
+My name is Chukwuemeka Emmanuel Mordi, just Mordi is fine. I'm currently a Junior in Electrical and Computer Engineering at the University of Washington in Seattle. I’m also an undergraduate researcher at the [QT3 Lab](https://sites.google.com/uw.edu/qt3-lab/home) working on developing software for hyperspectral imaging on a quantum light microscope alongside my advisors [Max Parsons](https://people.ece.uw.edu/parsons_max/) and [Kai-Mei Fu](https://phys.washington.edu/people/kai-mei-fu). Later this year I'll be working at Amazon as a Software Engineering Intern mainly focused on business data and intelligence.
 
 [Resume](assets/MordiResume.pdf) -
 [LinkedIn](https://linkedin.com/in/chukwuemeka-mordi) -
@@ -18,7 +18,7 @@ My name is Chukwuemeka Emmanuel Mordi, just Mordi is good. I'm currently a Junio
 
 # research
 
-- [Quantum Light Microscope](https://github.com/qt3uw) - Developing software to enable hyperspectral imaging on a quantum light microscope. Which is a confocal microscope designed for the analysis of light from single quantum emitters at room temperature, such as spin-defects in materials and quantum dots.
+- [Quantum Light Microscope](https://github.com/qt3uw) - I'm working on software to enable hyperspectral imaging on a quantum light microscope, which is a confocal microscope used for the analysis of light from single quantum emitters at room temperature, such as spin-defects in materials and quantum dots.
 
 # projects
 
