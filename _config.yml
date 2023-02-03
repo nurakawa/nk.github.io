@@ -24,7 +24,7 @@ linkedin_username: chukwuemeka-mordi
 google_analytics: G-RTK1ER4F16
 
 # Build settings
-theme: Hagura - Light!
+theme: no-style-please
 plugins:
   - jekyll-feed
 
