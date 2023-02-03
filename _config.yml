@@ -14,6 +14,7 @@ url: "https://cmordi.github.io" # the base hostname & protocol for your site, e.
 domain: cmordi.github.io
 
 title: Chukwuemeka Mordi
+author: Chukwuemeka Mordi
 description: Personal Website
 
 email: cmordi@uw.edu
@@ -38,6 +39,7 @@ sass:
 
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
