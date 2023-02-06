@@ -1,5 +1,6 @@
 # Personal Website
-live at https://cmordi.github.io/ 
+live at https://nurakawa.github.io
 
-i put together the alpha version of the site in one sitting. i've refactored it since then but please me know if anything is broken 👨🏾‍🔧
+forked from cmordi/cmordi.github.io (https://cmordi.github.io/)
+
 
