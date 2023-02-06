@@ -10,19 +10,19 @@
 # in the templates via {{ site.myvariable }}.
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://cmordi.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-domain: cmordi.github.io
+url: "https://nurakawa.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+domain: nurakawa.github.io
 
-title: Chukwuemeka Mordi
-author: Chukwuemeka Mordi
+title: Nura Kawa
+author: Nura Kawa
 description: Personal Website
 
-email: cmordi@uw.edu
-github_username: cmordi
-linkedin_username: chukwuemeka-mordi
+email:  
+github_username: nurakawa
+linkedin_username: 
 
 #Added this for google analytics. hopefully this works!!!
-google_analytics: G-RTK1ER4F16
+google_analytics: 
 
 # Build settings
 #theme: minima
