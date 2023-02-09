@@ -7,16 +7,16 @@ title: null
 ---
 
 
-![My Picture](assets/photo-nura.jpg){: style="float: right; display:block; margin-left:auto; margin-right:auto; height: 200px; border-radius: 50%; padding: 5px;"}
+![My Picture](assets/photo-nura.jpg){: style="float: right; display:block; margin-left:auto; margin-right:auto; height: 190px; border-radius: 50%; padding: 5px;"}
 
 # about 
 
 My name is Nura Kawa, and I am a Research Scientist at [neurocat](https://neurocat.ai), a startup based in Berlin, Germany.
 	
-My research interests are in Robustness and Explainability of AI. I would like to explore methods that enable the development of AI applications that are highly functional, but also reliable and responsible. At neurocat I currently work on developing and implementing methods for assessing the robustness of AI for on autonomous vehicles. 
+My research interests are in Robustness and Explainability of AI. I would like to explore methods that enable the development of AI applications that are highly functional, but also reliable and responsible. At neurocat I currently develop methods for assessing the robustness of AI models used in autonomous vehicles. 
  
 
-Previously I completed an MSc in Statistics from KU Leuven (Belgium), during which I wrote my [Master's Thesis](https://github.com/nurakawa/localized-classmap/blob/main/msc_thesis_kawa.pdf) on a new method for Explainable AI; during my studies I was fortunate to be funded by the [Science@Leuven Scholarship](https://wet.kuleuven.be/english/scienceatleuvenscholarship).  I also hold a BA in Statistics from UC Berkeley (USA), where I worked on research in Bayesian Statistics applied to Hydrogeology.
+Previously I completed an MSc in Statistics _magna cum laude_ from KU Leuven (Belgium), during which I wrote my [Master's Thesis](https://github.com/nurakawa/localized-classmap/blob/main/msc_thesis_kawa.pdf) on a new method for Explainable AI. During my studies I was fortunate to be funded by the [Science@Leuven Scholarship](https://wet.kuleuven.be/english/scienceatleuvenscholarship). I also have a BA in Statistics from UC Berkeley (USA), where I worked as a [URAP](https://research.berkeley.edu/urap/) student on research in Bayesian Statistics applied to Hydrogeology.
 
 [LinkedIn](https://linkedin.com/in/nurakawa) - 
 [GitHub](https://github.com/nurakawa)
