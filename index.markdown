@@ -34,7 +34,7 @@ Previously I completed an MSc in Statistics _magna cum laude_ from KU Leuven (Be
 
 Artificial Intelligence:
 
-- (2022) [Security of AI-Systems: Fundamentals - Adversarial Deep Learning](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/KI/Security-of-AI-systems_fundamentals.pdf?__blob=publicationFile&v=4) Bundesamt für Sicherheit in der Informationstechnik.
+- (2022) [Security of AI-Systems: Fundamentals - Provision or use of external data ortrained models](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/Studies/KI/P464_Provision_use_external_data_trained_models.pdf?__blob=publicationFile&v=7) Bundesamt für Sicherheit in der Informationstechnik.
 
 
 Bayesian Statistics for Hydrogeology:
