@@ -108,7 +108,7 @@
   }
   
   #main-navigation {
-    word-spacing: 1.75em;
+    word-spacing: 0.15em;
     padding-bottom: 0.55em;  
   }
   
@@ -121,7 +121,8 @@
     font-weight: strong;
     //background-color: #D6BBB645; // pink
     line-height: 24px;
-    padding: 2px 4px 0 4px;
+    // padding: 2px 4px 0 4px;
+    padding: 2px 0px 0 2px;
     // box-shadow: 2px 0 0 #D6BBB670;
   }
   

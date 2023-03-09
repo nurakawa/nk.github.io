@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: writings, articles and talks
+title: articles and talks
 ---
 
 <ul style="line-height: 2.2">

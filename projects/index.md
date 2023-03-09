@@ -1,12 +1,8 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: page
-title: null
+title: current projects
 ---
 
-# current projects
 - [BerDiBa (Berlin Digital Rail Operations)](https://www.hhi.fraunhofer.de/en/departments/ai/projects/berdiba.html) BerDiBa aims to implement a holistic digital twin for rail operations using innovative signal processing methods and Artificial Intelligence. My work focuses on methods for robustness assessment of AI modules in autonomous railway systems. 
 
 # past projects
