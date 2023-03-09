@@ -2,14 +2,17 @@
 layout: default
 ---
 
-{%-include back_link.html-%}
-
 <article>
-  <p class="post-meta">
-    <time datetime="{{ page.date }}">{{ page.date | date: site.theme_config.date_format }}</time>
+  <br>
+  {%-include back_link.html-%} 
+  <br>
+  <h1>{{ page.title }}</h1> 
+
+   <p class="post-meta">
+    <time datetime="{{ page.date }}" style="float:left; font-size:16px; color:gray;">{{ page.date | date: site.theme_config.date_format }} </time>
   </p>
-  
-  <h1>{{ page.title }}</h1>
+  <br> <br>
+ 
 
   {{ content }}
 </article>

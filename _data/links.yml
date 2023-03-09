@@ -1,0 +1,9 @@
+- url: /
+  title: about
+- url: /projects/
+  title: projects
+- url: /post/
+  title: writings
+- url: /publications/
+  title: publications
+
