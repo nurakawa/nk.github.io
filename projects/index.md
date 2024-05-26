@@ -2,6 +2,8 @@
 layout: page
 title: current projects
 ---
+- [news-polygraph](https://news-polygraph.com/) The goal of the news-polygraph project is to build an AI-driven decision support system for journalists. The system will be designed to support multimodal fact-checking and content verification, addressing the complexities of modern news verification. My work focuses on trust aspects of the system: robustness and explainability. 
+
 
 - [BerDiBa (Berlin Digital Rail Operations)](https://www.hhi.fraunhofer.de/en/departments/ai/projects/berdiba.html) BerDiBa aims to implement a holistic digital twin for rail operations using innovative signal processing methods and Artificial Intelligence. My work focuses on methods for robustness assessment of AI modules in autonomous railway systems. 
 
