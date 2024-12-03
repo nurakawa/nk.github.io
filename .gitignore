@@ -6,3 +6,5 @@
 vendor
 Gemfile.lock
 _site
+
+content/posts/neural-networks.md
