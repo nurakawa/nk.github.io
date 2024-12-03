@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+<link rel="icon" type="image/ico" href="http://localhost:1313//favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313//favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313//android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313//apple-touch-icon.png">
+
+<meta name="description" content="This post shows a custom d3.js calendar visualization that allows us to make a connection between change in daily mobility and a nation&#39;s mobility restrictions in 2020."/>
+
+<title>
+    
+    Visualization | Nura Kawa
+    
+</title>
+
+<link rel="canonical" href="http://localhost:1313/posts/original-2021-06-20-mobility-2020/"/>
+
+<meta property="og:url" content="http://localhost:1313/posts/original-2021-06-20-mobility-2020/">
+  <meta property="og:site_name" content="Nura Kawa">
+  <meta property="og:title" content="Visualization">
+  <meta property="og:description" content="This post shows a custom d3.js calendar visualization that allows us to make a connection between change in daily mobility and a nation&#39;s mobility restrictions in 2020.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-07-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-07-10T00:00:00+00:00">
+    <meta property="article:tag" content="Visualization">
+    <meta property="article:tag" content="D3">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.b3ef64c51f9192338de2605316bd958360ca9625779d5fcff76cff489a91e040.css" media="all">
+
+
+
+
+
+  </head>
+
+  
+
+  
+  
+  
+
+  <body class="light">
+
+    <div class="content">
+      <header>
+        
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">
+        <a href="http://localhost:1313/">Nura Kawa</a>
+    </h1>
+
+    <div class="flex">
+        
+
+        
+        
+      
+        <p class="small ">
+            <a href="/" >
+                /home
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/posts" >
+                /posts
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/projects" >
+                /projects
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/about" >
+                /about
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+      </header>
+
+      <main class="main">
+        
+
+
+
+
+
+<div class="breadcrumbs">
+    
+    <a href="/">Home</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a href="/posts/">Posts</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a class="breadcrumbs-current" href="/posts/original-2021-06-20-mobility-2020/">Visualization</a>
+</div>
+
+
+
+<div >
+
+  <div class="single-intro-container">
+
+    
+
+    <h1 class="single-title">Visualization</h1>
+    
+    <p class="single-summary">An interactive custom visualization of European mobility in 2020 using d3.js.</p>
+    
+
+    
+
+    <p class="single-readtime">
+      
+      
+      
+      <time datetime="2020-07-10T00:00:00&#43;00:00">July 10, 2020</time>
+      
+
+      
+    </p>
+
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div class="single-content">
+    <h3 id="the-world-in-2020">The world in 2020</h3>
+<p>It goes without saying that 2020 has been characteristically marked by the Covid-19 pandemic. One of the primary tools that policymakers across the world have chosen to curb the spread of Covid-19 is to impose restriction on mobility. For those of us in Europe, we can take a calendar view of how our time spent at home, at work, and outdoors has changed as a result of national policies.</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The calendar heatmap shows, for a selected nation and mobility category, the daily percent change in mobility compared to a baseline value (more information in the &ldquo;Data&rdquo; section). The linear calendar shows the start and end dates of the selected nation&rsquo;s Covid-19 response measures.</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>To get some insights, <strong>please make some selections</strong>!
+<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+
+    
+<div class="form-group row"><div class="col-xs-2">
+
+<!-- Select country -->
+<select id="calendarCountry">
+  <option value="Austria">Austria</option> 
+  <option value="Belgium">Belgium</option> 
+  <option value="Bulgaria">Bulgaria</option> 
+  <option value="Croatia">Croatia</option> 
+  <option value="Czechia">Czechia</option> 
+  <option value="Denmark">Denmark</option> 
+  <option value="Estonia">Estonia</option> 
+  <option value="Finland">Finland</option> 
+  <option value="France">France</option> 
+  <option value="Germany" selected >Germany</option> 
+  <option value="Greece">Greece</option> 
+  <option value="Hungary">Hungary</option> 
+  <option value="Ireland">Ireland</option> 
+  <option value="Italy">Italy</option> 
+  <option value="Latvia">Latvia</option> 
+  <option value="Lithuania">Lithuania</option> 
+  <option value="Luxembourg">Luxembourg</option> 
+  <option value="Malta">Malta</option> 
+  <option value="Netherlands">Netherlands</option> 
+  <option value="Norway">Norway</option> 
+  <option value="Poland">Poland</option> 
+  <option value="Portugal">Portugal</option> 
+  <option value="Romania">Romania</option> 
+  <option value="Slovakia">Slovakia</option> 
+  <option value="Slovenia">Slovenia</option> 
+  <option value="Spain">Spain</option> 
+  <option value="Sweden">Sweden</option> 
+  <option value="Switzerland">Switzerland</option> 
+  <option value="United Kingdom">United Kingdom</option> 
+  </select>
+
+<!-- Select Indicator -->
+<select id="ddlViewBy">
+  <option value="retail and recreation">retail and recreation</option>
+  <option value="grocery and pharmacy">grocery and pharmacy</option>
+  <option value="parks">parks</option>
+  <option value="transit stations">transit stations</option>
+  <option value="workplaces" >workplaces</option>
+  <option value="residential">residential</option>
+  <option value="driving" selected >driving</option>
+  <option value="walking">walking</option>
+</select>
+</div></div>
+    
+<!-- Calendar Heatmap -->
+    
+<div id="calendar" style="width: 110%; height: 220px; font-size:12px;"></div>
+
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script> <!-- load d3.js from CDN. -->
+
+<script src="/js/d3.calendar.js"></script>
+
+<script src="/calendar-heatmap.js"></script>
+    
+<!-- Div for Linear Calendar and Key-->
+        
+<div class="wrapper" style="width: 106%;">
+
+<!-- Line Calendar -->
+<div id="exports" class="item1" style="width: 100%; height: 200px;"></div>
+<div class="item2"  style="width: 100%; height: 200px;">
+  <strong>Key</strong>
+  <p style="font-size:10px; font-family: sans-serif; padding:0; margin:0; line-height:1.75;">
+    1 - Ban on All Events <br>
+    2 - Close Entertainment Venues <br>
+    3 - Mask Mandatory in All Spaces <br>
+    4 - Close Non-Essential Stores <br>
+    5 - Close Resaurants and Cafes <br>
+    6 - Limit Social Circle <br>
+    7 - Stay at Home Order <br>
+    8 - Teleworking <br>
+    9 - Workplace Closures <br>
+  </p>
+</div>
+</div>
+</div>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+<script src="/js/d3.linearcalendar.js"></script>
+<script src="/linear-calendar.js"></script>
+
+
+<h3 id="some-insights">Some Insights</h3>
+<ul>
+<li>Finland, Estonia, Sweden and Norway had comparatively few Covid Response Measures compared to Belgium, France, Greece and Italy; yet, all countries have relatively similar residential mobility patterns. Sweden, despite its laissez-faire Covid-19 response, shows a strong decrease in mobility in workplaces and transit stations.</li>
+<li>People walked and drove less during times of Covid restrictions. Time spent in parks increases dramatically in the summer for nearly all countries, likely due to warmer weather.</li>
+<li>In several countries - notably Belgium, Netherlands and Luxembourg, people spent more time at home on weekdays, even when stay-at-home response measures were temporarily lifted.</li>
+</ul>
+<h3 id="the-data">The Data</h3>
+<p>Since the beginning of the Covid-19 pandemic, Google has provided <a href="https://www.google.com/covid19/mobility/">open-source Mobility Reports</a> to &ldquo;provide insights into what has changed in response to policies aimed at combating COVID-19.&rdquo; Starting from February 6, 2020, the data show for each day how visits and length of stay at different places change compared to a baseline.</p>
+<p><strong>The baseline is the median value, for the corresponding day of the week, during the 5-week period Jan 3–Feb 6, 2020.</strong></p>
+<p>The data can also be downloaded directly from <a href="https://raw.githubusercontent.com/ActiveConclusion/COVID19_mobility/master/summary_reports/summary_report_countries.csv">Our World in Data</a>.</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="please-note-interpreting-the-data">Please Note: Interpreting the Data</h3>
+<p>Google&rsquo;s Mobility data is relative to a baseline. Therefore, it&rsquo;s not adjusted for seasonal fluctuations that naturally occur (for instance, people spend more time in parks when the weather is warmer, pandemic or not). The Covid-19 response measures included in the linear calendar are only a select few of the response measures taken. Therefore, they do not accurately represent all nations&rsquo; responses; some nations relied more heavily on partial measures and/or regional measures.</p>
+
+    
+  </div>
+
+  
+
+
+  
+
+  
+  
+
+<div class="single-pagination">
+    <hr />
+
+    <div class="flex">
+
+        <div class="single-pagination-prev">
+            
+        </div>
+
+        <div class="single-pagination-next">
+            
+            <div class="single-pagination-container-next">
+                <div class="single-pagination-text">
+                    <a href="/posts/robustness-assessment/">
+                        Security of AI Systems: Robustness
+                    </a>
+                </div>
+                <div class="single-pagination-text">→</div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <hr />
+</div>
+
+
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+      </main>
+    </div>
+
+    <footer>
+      
+
+    
+    <p>Powered by
+        <a href="https://gohugo.io/">Hugo</a>
+        theme based on 
+        <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+    </p>
+    
+    
+    
+
+
+
+
+    </footer>
+    
+  </body>
+
+  <script>
+
+  function isAuto() {
+    return document.body.classList.contains("auto");
+  }
+
+  function setTheme() {
+    if (!isAuto()) {
+      return
+    }
+
+    document.body.classList.remove("auto");
+    let cls = "light";
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      cls = "dark";
+    }
+
+    document.body.classList.add(cls);
+  }
+
+  function invertBody() {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+  }
+
+  if (isAuto()) {
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(invertBody);
+  }
+
+  setTheme();
+
+</script>
+
+</html>

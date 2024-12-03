@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Visualization on Nura Kawa</title>
+    <link>http://localhost:1313/tags/visualization/</link>
+    <description>Recent content in Visualization on Nura Kawa</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/visualization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Visualization: European Mobility in 2020</title>
+      <link>http://localhost:1313/posts/mobility-2020/</link>
+      <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mobility-2020/</guid>
+      <description>An interactive custom visualization of European mobility in 2020 using d3.js.</description>
+    </item>
+  </channel>
+</rss>

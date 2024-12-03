@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Database on Nura Kawa</title>
+    <link>http://localhost:1313/tags/database/</link>
+    <description>Recent content in Database on Nura Kawa</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Machine Learning Experiments Done Right</title>
+      <link>http://localhost:1313/posts/design-ml-experiments/</link>
+      <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/design-ml-experiments/</guid>
+      <description>A detailed guideline for designing machine learning experiments that produce reliable, reproducible results.</description>
+    </item>
+    <item>
+      <title>Linear Regression</title>
+      <link>http://localhost:1313/posts/linear-regression/</link>
+      <pubDate>Mon, 22 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/linear-regression/</guid>
+      <description>A straightforward explanation of the linear regression model: how it is defined, how it is optimized, and when to use it.</description>
+    </item>
+    <item>
+      <title>Neural Networks</title>
+      <link>http://localhost:1313/posts/neural-networks/</link>
+      <pubDate>Sun, 20 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/neural-networks/</guid>
+      <description>A simple explanation of neural networks: their definition, optimization, and use cases.</description>
+    </item>
+  </channel>
+</rss>

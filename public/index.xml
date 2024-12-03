@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Nura Kawa</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Home on Nura Kawa</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Machine Learning Experiments Done Right</title>
+      <link>http://localhost:1313/posts/design-ml-experiments/</link>
+      <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/design-ml-experiments/</guid>
+      <description>A detailed guideline for designing machine learning experiments that produce reliable, reproducible results.</description>
+    </item>
+    <item>
+      <title>Linear Regression</title>
+      <link>http://localhost:1313/posts/linear-regression/</link>
+      <pubDate>Mon, 22 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/linear-regression/</guid>
+      <description>A straightforward explanation of the linear regression model: how it is defined, how it is optimized, and when to use it.</description>
+    </item>
+    <item>
+      <title>Neural Networks</title>
+      <link>http://localhost:1313/posts/neural-networks/</link>
+      <pubDate>Sun, 20 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/neural-networks/</guid>
+      <description>A simple explanation of neural networks: their definition, optimization, and use cases.</description>
+    </item>
+    <item>
+      <title>Visualization: European Mobility in 2020</title>
+      <link>http://localhost:1313/posts/mobility-2020/</link>
+      <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mobility-2020/</guid>
+      <description>An interactive custom visualization of European mobility in 2020 using d3.js.</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;I received a Bachelor’s degree in Statistics from &lt;strong&gt;UC Berkeley&lt;/strong&gt; and a Master’s degree from &lt;strong&gt;KU Leuven&lt;/strong&gt;. During my studies, I developed an interest in Machine Learning, especially in reliability aspects such as explainabilty, privacy, and robustness. I explored those topics through my work as an AI Research Scientist at &lt;a href=&#34;https://arxiv.org/abs/2408.17311&#34;&gt;neurocat&lt;/a&gt; and my master’s thesis on a &lt;a href=&#34;https://github.com/nurakawa/localized-classmap&#34;&gt;novel XAI method for classifiers&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;In my free time, I like to read - here&amp;rsquo;s what&amp;rsquo;s on my &lt;a href=&#34;https://nuras-notes.notion.site/13d875c7c3b5803bb4b6c0aca39b0720?v=13d875c7c3b581519374000c4a24d443&amp;amp;pvs=74&#34;&gt;bookshelf&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Projects</title>
+      <link>http://localhost:1313/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Security of AI Systems&lt;/strong&gt;: an in-depth study on the security risks of transfer learning, including backdoor and adversarial attacks; in collaboration with the German Federal Office of Information Security &lt;a href=&#34;https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/Studies/KI/P464_Provision_use_external_data_trained_models.pdf?__blob=publicationFile&amp;amp;v=7&#34;&gt;publication&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;BerDiBa (Berlin Digital Rail Operations)&lt;/strong&gt;: a holistic digital twin for rail operations using innovative signal processing methods and Artificial Intelligence. My work focused on robustness assessment of AI modules in autonomous railway systems.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Localized Classmaps&lt;/strong&gt;: a new Explainable AI method that enables an interpretation of the outputs of classification algorithms. &lt;a href=&#34;https://github.com/nurakawa/localized-classmap&#34;&gt;code&lt;/a&gt;, &lt;a href=&#34;https://medium.com/towards-data-science/explainable-ai-xai-with-class-maps-d0e137a91d2c&#34;&gt;publication&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

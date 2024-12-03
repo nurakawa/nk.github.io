@@ -1,0 +1,14 @@
+{
+  "name": "@d3/disjoint-force-directed-graph/2",
+  "main": "ba609e7e6741119b@171.js",
+  "version": "171.0.0",
+  "homepage": "https://observablehq.com/@d3/disjoint-force-directed-graph/2",
+  "author": {
+    "name": "D3",
+    "url": "https://observablehq.com/@d3"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}

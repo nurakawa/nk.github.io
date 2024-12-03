@@ -1,0 +1,85 @@
+baseURL = 'https://nurakawa.github.io/'
+languageCode = 'en-us'
+title = 'Nura Kawa'
+theme = 'typo'
+
+[taxonomies]
+tag = 'tags'
+
+# Google analytics code
+googleAnalytics = "G-xxxxxxxxx"
+
+[params]
+# Meta description
+description = "A Tech Blog"
+
+# Appearance settings
+theme = 'light'
+colorPalette = 'eink'
+hideHeader = false
+
+# Intro on main page, content is markdown
+homeIntroTitle = ''
+homeIntroContent = """
+I am a researcher with a strong foundation in statistics and computer science. I am passionate about leveraging AI to enable __intelligent decision-making__ and to provide __access to reliable information__.
+
+"""
+
+# Collection to display on home
+homeCollectionTitle = 'Posts'
+homeCollection = 'posts'
+
+# Lists parameters
+paginationSize = 100
+listSummaries = true
+listDateFormat = '2 Jan 2006'
+
+# Breadcrumbs
+breadcrumbs = true
+
+# Social icons
+[[params.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/nurakawa/"
+
+[[params.social]]
+name = "medium"
+url = "https://medium.com/@nurakawa"
+
+[[params.social]]
+name = "github"
+url = "https://github.com/nurakawa"
+
+# Main menu pages
+[[params.menu]]
+name = "home"
+url = "/"
+
+[[params.menu]]
+name = "posts"
+url = "/posts"
+
+[[params.menu]]
+name = "projects"
+url = "/projects"
+
+[[params.menu]]
+name = "about"
+url = "/about"
+
+# Syntax highligth on code blocks
+[markup]
+[markup.highlight]
+style = 'algol'
+
+# Giscus comments
+[params.giscus]
+enable = false
+repo = "user/repo"
+repoid = "repoId"
+category = "General"
+categoryid = "categoryId"
+mapping = "pathname"
+theme = "preferred_color_scheme"
+
+

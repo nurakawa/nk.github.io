@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+<link rel="icon" type="image/ico" href="http://localhost:1313//favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313//favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313//android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313//apple-touch-icon.png">
+
+<meta name="description" content="A straightforward explanation of the linear regression model: how it is defined, how it is optimized, and when to use it."/>
+
+<title>
+    
+    Linear Regression | Nura Kawa
+    
+</title>
+
+<link rel="canonical" href="http://localhost:1313/posts/linear-regression/"/>
+
+<meta property="og:url" content="http://localhost:1313/posts/linear-regression/">
+  <meta property="og:site_name" content="Nura Kawa">
+  <meta property="og:title" content="Linear Regression">
+  <meta property="og:description" content="A straightforward explanation of the linear regression model: how it is defined, how it is optimized, and when to use it.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-01-22T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-01-22T00:00:00+00:00">
+    <meta property="article:tag" content="Database">
+    <meta property="article:tag" content="Java">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.f1ad03b67a5380b14dc1bf13677331e49fdce064e1619b80e8e0b2e90a1685e0.css" media="all">
+
+
+
+
+
+  </head>
+
+  
+
+  
+  
+  
+
+  <body class="light">
+
+    <div class="content">
+      <header>
+        
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">
+        <a href="http://localhost:1313/">Nura Kawa</a>
+    </h1>
+
+    <div class="flex">
+        
+
+        
+        
+      
+        <p class="small ">
+            <a href="/" >
+                /home
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/posts" >
+                /posts
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/projects" >
+                /projects
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/about" >
+                /about
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+      </header>
+
+      <main class="main">
+        
+
+
+
+
+
+<div class="breadcrumbs">
+    
+    <a href="/">Home</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a href="/posts/">Posts</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a class="breadcrumbs-current" href="/posts/linear-regression/">Linear Regression</a>
+</div>
+
+
+
+<div >
+
+  <div class="single-intro-container">
+
+    
+
+    <h1 class="single-title">Linear Regression</h1>
+    
+    <p class="single-summary">A straightforward explanation of the linear regression model: how it is defined, how it is optimized, and when to use it.</p>
+    
+
+    
+
+    <p class="single-readtime">
+      
+      
+      
+      <time datetime="2024-01-22T00:00:00&#43;00:00">January 22, 2024</time>
+      
+
+      
+      &nbsp; · &nbsp;
+      6 min read
+      
+    </p>
+
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div class="single-content">
+    <h2 id="problem-setting">Problem Setting</h2>
+<p>A regression problem involves estimating the relationship between two entities: a quantitative response variable and a predictor variable. This could be, for example, a person’s exam scores (the response) and the number of hours he spent studying (the predictor), or an item’s sale price and its cost of production.</p>
+<p>In 1903 Karl Pearson collected data on the heights of 1,078 fathers and their full-grown sons; the following is a scatterplot of the data, where each point represents a father-son pair:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="Figure 1: A scatterplot of Pearson’s father-son pairs, obtained from [3]." src="../../linear-regression/pearson-scatterplot.png">
+    </div>
+
+    
+</figure></p>
+<p>The trend in the scatterplot indicates some correlation between fathers’ and sons’ heights: taller fathers tend to have taller sons, and vice versa. However, not every father-son pair falls neatly into this trend.</p>
+<p>It would be useful to develop a quantitative model that can, in a way, summarize the relationship we observe in the data. Hence, to solve the <strong>regression problem</strong> is to find some mathematical function that can take as input a predictor (the father’s height) and output a reasonably close estimate of the response (his son’s height). Because the trend appears to be linear, it makes sense to <strong>assume that the mathematical function is a line</strong>.</p>
+<h2 id="the-linear-model">The Linear Model</h2>
+<p>One approach to statistical modeling is to constrain the function that maps a father’s height to his son’s height to take a specific form. Linear Regression models the relationship between the response variable and its predictor variables as a line. A linear model takes the form:</p>
+<p>$$y = \beta_0 + \beta_1X_i + \epsilon_i, \hspace{2em} i \in 1 \dots n$$</p>
+<p>where $(X_i, y_i), \hspace{0.5em} i \in 1 \dots n$ are the <em>n</em> observations of (predictor, response) pairs, $\beta_0, \beta_1$ are, respectively, the intercept and slope of the line. They are often referred to as the model parameters. The random error in the model is denoted as $\epsilon_i, \hspace{0.5em} i \in 1 \dots n$.</p>
+<p>In terms of our example, this model would be saying:</p>
+<p><em>A son’s height is equal to some constant (the intercept), plus a factor (the slope) multiplied by his father’s height, plus random error. This is estimated from 1,078 observations of father-son pairs.</em></p>
+<p>In order to find the line best describes the relationship between father and son heights, we need to estimate the model parameters, or to find slope and intercept of the line.</p>
+<h2 id="optimization-estimating-the-model-parameters">Optimization: Estimating the model parameters</h2>
+<p>How do we estimate the parameters, or coefficients, of this linear model?</p>
+<p>Consider again the scatterplot of Pearson’s data, this time with two candidate linear regression models. What would be the better line to summarize the trend we see in the cloud of points — the solid line, or the dashed line?</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="Figure 2: Pearson’s father-son pairs with sample regression lines, from [2]." src="../../linear-regression/pearson-scatterplot-regression.png">
+    </div>
+
+    
+</figure></p>
+<p>The line that would best summarize, or fit, all the data would follow it as closely as possible. This means that the total distance between the regression line and each data point is as small as possible. As a result, if we were to use this line to predict a son’s height given his father’s height, the prediction would, on average, have the smallest amount of error relative to the data. Any other line would be biased — it would be a better fit for some points than for others.</p>
+<p>Below, we see a visualization of what this means: if we add all the vertical lines, or <em>residuals</em>, between the points and the line, this sum would be as small as possible.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="Figure 3: Fitting a regression line, from [2]." src="../../linear-regression/regression-line.png">
+    </div>
+
+    
+</figure></p>
+<p>To find the best fitting line we can use the <strong>least squares optimization method</strong>: we define a cost function of our parameters to be the Residual Sum of Squares and compute its solution.</p>
+<p>For a single observation, its residual would be:</p>
+<p>$$r_i = y_i - (\beta_0 + \beta_iX_i)$$</p>
+<p>(We can ignore the $\epsilon$ term).</p>
+<p>The dashed vertical lines in Figure 3 are residuals.We define the <strong>Residual Sum of Squares (RSS)</strong> as the sum of the squared residuals:</p>
+<p>$$RSS = \sum_{i=1}^{n}r_i^2 = \sum_{i=1}^{n} (y_i - (\beta_0 + \beta_iX_i))^2$$</p>
+<p>The reason why we sum the squared residuals is to obtain a <strong>quadratic</strong> function, which has a closed-form solution. This way we can directly solve for the $\beta$ parameters by taking the derivative with respect to each parameter and setting them to equal zero. This can be done manually, or using statistical software.</p>
+<p>After optimization we obtain the fitted linear model:</p>
+<p>$$\hat{y} = \hat{\beta_0} + \hat{\beta_1}X_i, \hspace{2em} i \in 1 \dots n$$</p>
+<p>where our estimates for the $\beta$ parameters are denoted with “^”, and our “fitted values”, or predicted values, are the y observations denoted with “^”.</p>
+<h2 id="making-predictions">Making predictions</h2>
+<p>To make predictions for a new observation, we use our estimated parameters and our formula for the fitted regression model:</p>
+<p>$$\hat{y_\text{new}} = \hat{\beta_0} + \hat{\beta_1}x_\text{new}$$</p>
+<p>Another way to look at the linear regression model is that it models an average. Each prediction is the expected value given our data; in other words, it is what we would expect to see, on average. For a more complete prediction, we could derive prediction intervals based on properties of our estimated parameters.</p>
+<h2 id="assumptions-of-a-linear-regression-model">Assumptions of a Linear Regression model</h2>
+<p>We cannot always use a linear model for regression problems. Before fitting a model, we have to check for the following:</p>
+<p><strong>(A1) Conditional Independence</strong>: The response observations are conditionally independent given the predictor observations. This means that for any observation, the value of its response does not change given the presence of another observation. This would be broken if, for example, students cheat on an exam; then, one student’s exam score would depend on the presence of another student.</p>
+<p><strong>(A2) Constant Variance</strong>: Observations of the response variable are uncorrelated and have constant variance. The variance term is called σ². This would be broken if, for example, the response is recorded on a device that has decreasing precision over time; the variance in measurements would increase with time.</p>
+<p><strong>(A3) Errors are independent, with Gaussian distribution and zero-mean</strong>: The deviations of the response around its expectations, modeled with the random error term epsilon , has a Gaussian distribution with a mean of 0 and a variance of $\sigma^2$. In mathematical notation:</p>
+<p>$$\forall i \hspace{1em} \epsilon_i \sim \mathcal{N}(0, \sigma^2)$$</p>
+<h3 id="why-are-these-assumptions-necessary-to-fulfill-">Why are these assumptions necessary to fulfill ?</h3>
+<p>These assumptions allow us to draw conclusions about the presence of bias and about the distribution of our estimated parameters. It follows that we can perform statistical hypothesis testing on our estimates of the model parameters. This is useful because:</p>
+<ul>
+<li>
+<p>A hypothesis test can show statistical significance that an estimated coefficient is nonzero; in other words, that the estimated relationship between a predictor and a response exists and is not trivial.</p>
+</li>
+<li>
+<p>We can derive confidence intervals for a parameter estimates, meaning that we give a range of the magnitude of a relationship between a predictor and a response. Because our parameter estimates depend on our data, confidence intervals allow for more realistic predictions.</p>
+</li>
+<li>
+<p>Breaking these assumptions can lead to poor model fit and poor prediction results.</p>
+</li>
+</ul>
+<h2 id="when-to-use-a-linear-model-for-regression-problems">When to use a linear model for regression problems</h2>
+<p>The simple linear regression model described in this post can be generalized to be used for a larger number of predictors, and it has many adaptations for more complex regression problems. As in our example, linear models make sense to use if exploratory data analysis shows linear relationships between predictors and a response variable.</p>
+<p>There are many advantages to using linear models, including ease of optimization, useful statistical properties of its estimates and direct interpretation of the parameters. If a linear model fits well to the data, then it is better to use it instead of fitting a more complex model.</p>
+<p>However, it is important to remember that linear regression models only work well when the assumptions it makes on the data are met.</p>
+
+    
+  </div>
+
+  
+
+
+  
+
+  
+  
+
+<div class="single-pagination">
+    <hr />
+
+    <div class="flex">
+
+        <div class="single-pagination-prev">
+            
+            <div class="single-pagination-container-prev">
+                <div class="single-pagination-text">←</div>
+                <div class="single-pagination-text">
+                    <a href="/posts/neural-networks/">
+                        Neural Networks
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="single-pagination-next">
+            
+            <div class="single-pagination-container-next">
+                <div class="single-pagination-text">
+                    <a href="/posts/design-ml-experiments/">
+                        Machine Learning Experiments Done Right
+                    </a>
+                </div>
+                <div class="single-pagination-text">→</div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <hr />
+</div>
+
+
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+      </main>
+    </div>
+
+    <footer>
+      
+
+    
+    <p>Powered by
+        <a href="https://gohugo.io/">Hugo</a>
+        theme based on 
+        <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+    </p>
+    
+    
+    
+
+
+
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+      ]
+    });
+  });
+</script>
+
+
+    </footer>
+    
+  </body>
+
+  <script>
+
+  function isAuto() {
+    return document.body.classList.contains("auto");
+  }
+
+  function setTheme() {
+    if (!isAuto()) {
+      return
+    }
+
+    document.body.classList.remove("auto");
+    let cls = "light";
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      cls = "dark";
+    }
+
+    document.body.classList.add(cls);
+  }
+
+  function invertBody() {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+  }
+
+  if (isAuto()) {
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(invertBody);
+  }
+
+  setTheme();
+
+</script>
+
+</html>
