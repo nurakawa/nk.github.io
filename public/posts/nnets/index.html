@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+<link rel="icon" type="image/ico" href="http://localhost:1313//favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313//favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313//android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313//apple-touch-icon.png">
+
+<meta name="description" content="This article presents a brief explanation of artificial neural networks and how they are used for prediction. It presents the material in two ways: first, in plain language without any mathematics; second, in simple language but with some mathematical notation."/>
+
+<title>
+    
+    Neural Networks | Nura Kawa
+    
+</title>
+
+<link rel="canonical" href="http://localhost:1313/posts/nnets/"/>
+
+<meta property="og:url" content="http://localhost:1313/posts/nnets/">
+  <meta property="og:site_name" content="Nura Kawa">
+  <meta property="og:title" content="Neural Networks">
+  <meta property="og:description" content="This article presents a brief explanation of artificial neural networks and how they are used for prediction. It presents the material in two ways: first, in plain language without any mathematics; second, in simple language but with some mathematical notation.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-02-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-02-20T00:00:00+00:00">
+    <meta property="article:tag" content="Database">
+    <meta property="article:tag" content="Java">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.f1ad03b67a5380b14dc1bf13677331e49fdce064e1619b80e8e0b2e90a1685e0.css" media="all">
+
+
+
+
+
+  </head>
+
+  
+
+  
+  
+  
+
+  <body class="light">
+
+    <div class="content">
+      <header>
+        
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">
+        <a href="http://localhost:1313/">Nura Kawa</a>
+    </h1>
+
+    <div class="flex">
+        
+
+        
+        
+      
+        <p class="small ">
+            <a href="/" >
+                /home
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/posts" >
+                /posts
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/projects" >
+                /projects
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+      </header>
+
+      <main class="main">
+        
+
+
+
+
+
+<div class="breadcrumbs">
+    
+    <a href="/">Home</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a href="/posts/">Posts</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a class="breadcrumbs-current" href="/posts/nnets/">Neural Networks</a>
+</div>
+
+
+
+<div >
+
+  <div class="single-intro-container">
+
+    
+
+    <h1 class="single-title">Neural Networks</h1>
+    
+    <p class="single-summary">A simple explanation of neural networks: their definition, optimization, and use cases.</p>
+    
+
+    
+
+    <p class="single-readtime">
+      
+      
+      
+      <time datetime="2022-02-20T00:00:00&#43;00:00">February 20, 2022</time>
+      
+
+      
+      &nbsp; · &nbsp;
+      18 min read
+      
+    </p>
+
+  </div>
+
+  
+
+  
+
+  
+  <aside class="toc">
+    <p><strong>Table of contents</strong></p>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#high-level-overview-no-math">High-Level Overview (no math)</a>
+      <ul>
+        <li><a href="#how-neural-networks-process-information">How neural networks process information</a></li>
+        <li><a href="#how-we-can-train-a-neural-network">How we can train a neural network</a></li>
+        <li><a href="#when-and-why-should-we-use-neural-networks">When and why should we use neural networks?</a></li>
+      </ul>
+    </li>
+    <li><a href="#mathematical-overview">Mathematical Overview</a>
+      <ul>
+        <li><a href="#how-artificial-neurons-process-information">How artificial neurons process information</a></li>
+        <li><a href="#how-a-neural-network-makes-a-prediction">How a neural network makes a prediction</a></li>
+        <li><a href="#how-do-we-train-a-neural-network">How do we train a neural network?</a></li>
+        <li><a href="#backpropagation-1">Backpropagation</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+  
+
+  
+
+  <div class="single-content">
+    <p><em>This blog post presents a brief explanation of artificial neural networks and how they are used for prediction. It presents the material in two ways: first, in plain language without any mathematics; second, in simple language but with some mathematical notation.</em></p>
+<h2 id="high-level-overview-no-math">High-Level Overview (no math)</h2>
+<p>A neural network is a computing system that is used to model a function that maps a set of inputs to their corresponding outputs. Inputs could be, for instance, peoples’ browsing history on an e-commerce platform, and the outputs could be the probability that each person would click on an advertisement. Or, inputs could
+be a set of images of animals, and their corresponding outputs could be the answer to the question, “is this image a cat?”</p>
+<p>A neural network that has been presented with a lot of examples of such inputs will become quite good at recognizing the patterns and get a sense of how inputs relate to outputs. The network can process an input - a list of products a person has viewed online, or an image of an animal - that it has not seen before and, based on what it learned, correctly determine how likely the person would click on an advertisement, or whether an image is of a feline.</p>
+<p>The neural network model is a collection of inter-connected nodes, or neurons, arranged in layers. The first layer is an input layer, which yields a mathematical representation of input of the function. The final layer is an output layer, which yields the output of the neural network, or its prediction. Between the first and final layers are usually at least one “hidden layer”, or layers of interconnected neurons. The image below presents an example of a neural network with two hidden layers.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="Figure 1: A scatterplot of Pearson’s father-son pairs, obtained from [3]." src="../../nnets/figure-1-cat.png">
+    </div>
+
+    
+</figure></p>
+<h3 id="how-neural-networks-process-information">How neural networks process information</h3>
+<p>Each individual neuron in a neural network functions as a decision-maker: it reads in bits of information, weights and sums the bits of information, and then outputs a decision. By arranging several neurons into a layer, we can make decisions from multiple inputs. With each layer, the network can make more complicated
+decisions - decisions that are based on input from the previous layer. That is why neural networks are often designed with several hidden layers - to be able to estimate very complex relationships between input and output. Returning to the cat-recognition example, one can imagine each neuron in the hidden layer of the above figure making a decision on the input. The first hidden layer’s neurons could ask “does the image depict a tail?” or “does the animal in the image have a face?”. In the second hidden layer, the questions could be more detailed, such as, “if the animal has a face, does the face have two eyes and a nose and whiskers?”</p>
+<p>A neural network learns by seeing a lot of examples for which we have a desired output. For each example it sees, a network can adjust its decision-making mechanisms. Technically, this means adjusting its neurons’ weights, which represent how much value a neuron given to each input, and its neurons’ biases, which
+represent by how much individual neurons shift their decisions. The final weights and biases in a network are those that make the total difference between the output of the neural network and the desired output as small as possible. With each example, the network makes an adjustment of its weights and biases. Once the network is trained with a very large number of examples, it can make good predictions for unseen examples.</p>
+<p>So, how exactly do we train a neural network to learn the relationship between input and output ?</p>
+<h3 id="how-we-can-train-a-neural-network">How we can train a neural network</h3>
+<p>When we feed an input into the neural network, we want the network’s output of the neural network to be as close as possible to the desired output - the “ground truth” output associated with the input. So, we can start by expressing the difference between the network’s output and the desired output as a cost function. Then, we can use standard optimization techniques to find the set of weights and biases of the network that minimize the cost function.</p>
+<h4 id="gradient-descent">Gradient Descent</h4>
+<p>A standard way of minimizing a cost function is with gradient descent - we start at a random feasible point and iteratively move in the direction where we decrease the cost function fastest, until we (hopefully) reach a minimum. For neural networks, this means shifting the weights and biases of each neuron in the network, such that the network as a whole has minimal cost.</p>
+<p>In order to do this, however, we need to be able to determine in what direction to move - this means computing how the cost function changes with respect to all the weights and biases in a network. For large networks, this task is quite challenging! Hence, we use the backpropagation algorithm: a method for computing the change in a neural network’s cost function with respect to each weight and bias in the neuron.</p>
+<h4 id="backpropagation">Backpropagation</h4>
+<p>The backpropagation algorithm is a method for computing the gradient of the cost function. The gradient can be thought of as a function of how the cost changes when we make a change to a weight or bias in the neural network. By knowing the gradient, we can determine how to callibrate the neural network to
+decrease the overall cost.</p>
+<p>Starting with the output layer, we iteratively compute how much the cost will change when we change a weight or bias in the neurons of that layer. After completing this computation for the output layer and the hidden layers, we get the gradient of the cost function. Typically, backpropagation is combined with gradient descent. As we compute the rate of change of the cost function with respect to the weights and biases of each layer, we can update each layer’s weights and
+biases according to the gradient descent rule. When the training terminates, we have (hopefully) found the set of optimal weights and biases that minimizes the cost.</p>
+<p>Backpropagation is done in the following steps:</p>
+<ol>
+<li>
+<p><strong>Input</strong>: Feed an example into the first layer of the network.</p>
+</li>
+<li>
+<p><strong>Feed Forward</strong>: Compute the output of each hidden layer. The output of a layer is the set of decisions made by each of its neurons. The “decision” of a neuron is a function of its weighted sum of the input from the previous layer. The output of each layer becomes the input of the next layer. After moving through all the hidden layers, compute the output of the output layer - this is the prediction of the neural network for that example.</p>
+</li>
+<li>
+<p><strong>Compute the error of the network</strong>: Here, “error” is a measure of how the cost function will change with respect to the values that it takes as input - the output of the final hidden layer. Specifically, the error is the gradient of the cost function with respect to the outputs of the last hidden layer, multiplied by the gradient of the outputs of the last hidden layer. This measures how sensitive the neural network’s output is when a change is made to the final hidden layer. When we know this, we can adapt the factors that contribute to a layer’s decisions (weights and biases) to reduce the error in the network.</p>
+</li>
+<li>
+<p><strong>Back-propagate the error</strong>: After computing the error of the final layer, we can repeat the step for each of the previous layer, moving from output layer to input layer. For each layer, we compute how the cost function will change with respect to changes in the output of that layer.</p>
+</li>
+<li>
+<p><strong>Output</strong>: Once we do this for all layers, we get the gradient of the cost function with respect to the weights and biases of the neural network.</p>
+</li>
+</ol>
+<p>Once we have computed the gradient of our cost function at each layer of the network, we can use an optimization algorithm to make changes to the weights and biases. We perform the backpropagation algorithm for each example in our training data. The more examples we show the network, the more it “learns” details and the better it performs on unseen examples. This is how we train a neural network to learn a function that maps inputs to outputs. Once a network is trained, it can be expected to make good predictions on new, unseen examples.</p>
+<h3 id="when-and-why-should-we-use-neural-networks">When and why should we use neural networks?</h3>
+<p>In the most general sense, neural networks can be used the task of prediction. They can process an image of an animal and predict its species, or they can predict a person’s probability of defaulting on a loan, or even predict the translation of a word from one language to another. Some of the reasons why neural networks are so popular is that:</p>
+<ul>
+<li>
+<p>A neural network with a single hidden layer can approximate any nonlinear function. If the relationship between an input and output is very, very complex, a neural network can approximate it.</p>
+</li>
+<li>
+<p>Neural networks can take multiple types of input, such as images and text, with ease - so long as they can be represented mathematically</p>
+</li>
+<li>
+<p>Because of the backpropagation algorithm, we can train very large neural networks quickly. This makes them ideal when working with very large datasets</p>
+</li>
+</ul>
+<p>However, it is important to note that not every prediction task requires a neural network!</p>
+<p>If the relationship between the input and output is relatively simple - for example, if it known to be linear or quadratic - then there is no need to use a neural network to model the relationship. A statistical model would suffice. Furthermore, if the data you are working with is not very large, there is likely no computational advantage to using a neural network. Finally, and most importantly, if your task requires understanding the relationship between the input and output, a statistical model is the better choice. Neural networks have shown to be excellent at predicting, but they do not reveal any interpretation or understanding about the relationship between input and output. Rather, they simply estimate the function that maps input to output.</p>
+<p>Statistical models such as linear or logistic regression, on the other hand, provide an elegant interpretation. Ultimately, given the widespread use and popularity, it is important to know what a neural network is, and how it works. But it is just as important to know the scenarios when it is, or is not, a good idea to use one.</p>
+<p>At this point, we have seen a very high-level overview of artificial neural networks. Hopefully, it gives a very basic understanding of the main ideas. The following section provides a more detailed understanding using mathematics.</p>
+<h2 id="mathematical-overview">Mathematical Overview</h2>
+<p>A neural network is a collection of inter-connected nodes, or neurons, arranged in layers. Each neuron processes input and yields output with a simple mathematical operation.</p>
+<h3 id="how-artificial-neurons-process-information">How artificial neurons process information</h3>
+<p>
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="Figure 2:  diagram of a perceptron, or a single neuron ." src="../../nnets/perceptron-rule-1.png">
+    </div>
+
+    
+</figure><br>
+<em>Figure 1: diagram of a perceptron, or a single neuron.</em></p>
+<p>Let $x_1 \dots x_n$ be the input into one neuron, as displayed in Figure 1 above. A neuron performs a weighted sum of the input. This parallels a way of making a decision: take in all the available information and weight it by importance. Let the weights be, for now, $w_1 \dots w_n$, where $w_j$ corresponds to $x_j$. After weighing and summing the evidence, the neuron compares it to a threshold. If the weighted evidence is at least as large as the threshold, the decision is 1 (yes). Otherwise, it is 0 (no). The output of this neuron will be:</p>
+<p>$$
+\tag{1}
+\texttt{output} =
+\begin{cases}
+0, &amp; \sum_{j} w_jx_j &lt; \texttt{threshold} \\
+1, &amp; \sum_{j} w_jx_j \ge \texttt{threshold}
+\end{cases}
+$$</p>
+<p>This single neuron is often called a perceptron, and its decision-making method the ``perceptron rule&quot;.</p>
+<p>We can re-write the perceptron rule in a more general method by defining some terms. A neuron&rsquo;s threshold can be looked at as a measure of by how much it shifts its decision. We denote the <em>bias</em> of neuron, $b$, to be $-1*\texttt{threshold}$.</p>
+<p>Let us call this weighted sum of inputs added to the bias our $z$ term, or</p>
+<p>$$z = \sum_{j=1}^n(w_jx_j) + b,$$</p>
+<p>and we can rewrite our perceptron rule as:</p>
+<p>$$
+\tag{2}
+\begin{equation}
+\texttt{output} = \begin{cases}
+0, &amp; \sum_{j} w_jx_j + b &lt; 0 \\
+1, &amp; \sum_{j} w_jx_j + b \ge 0
+\end{cases}
+\end{equation}
+$$</p>
+<p>Another adjustment we can consider is the output of a neuron - how it transforms $z$ into a decision. If the neuron outputs either 0 or 1, then this output can shift quite drastically with a small change in a single weight or the bias term. In a network consisting of multiple interconnected neurons, this behavior would be too unstable to allow for learning. So, when building a neural network, we typically want an output to be a smooth function of $z$ that yields a value between 0 and 1. This function, which is typically chosen to belong to the <em>sigmoid</em> family of functions, does not change drastically with a small change in input. Applying a sigmoid <em>activation function</em>, which we denote as $\sigma(\cdot)$ to the output of a neuron will make the neuron, and a neural network, more stable. This form of output is referred to by the literature as an <em>activation</em> of a neuron.</p>
+<p>We can re-write the decision-making equation of a neuron as follows:</p>
+<p>$$
+\tag{3}
+\begin{equation}
+a = \sigma(z),
+\end{equation}
+$$</p>
+<p>where $a$ is the output, or activation, of the neuron. The modified neuron, sometimes called a <em>sigmoid neuron</em>, depicted below:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="Figure 3:  diagram of a sigmoid neuron." src="../../nnets/perceptron-rule-2.png">
+    </div>
+
+    
+</figure>
+<em>Figure 2: Diagram of a sigmoid neuron.</em></p>
+<h3 id="how-a-neural-network-makes-a-prediction">How a neural network makes a prediction</h3>
+<p>Returning to Figure 1, we can now give a more detailed explanation of a neural network. In the first layer, the <em>input layer</em>, inputs are represented mathematically. In the first &ldquo;hidden layer&rdquo;, each neuron performs the operation described in Equation 2. We will number each layer $l$ as $1 \dots L$, where layer $1$ is the first hidden layer, and layer $L$ is the output layer. The activations of all the neurons in a layer are denoted as $a^{l}$.</p>
+<p>Starting with the first hidden layer, the activation of layer 1, $a^{1}$, become the input of the neurons in layer 2. The activations of layer 2 become the input to layer 3, and so on. In more detail, let:</p>
+<p>$a^{l}_j$ be the activation of neuron $j$ in layer $l$, and $a^{l}$ is the vector of activations in layer $l$</p>
+<p>$w^{l}_{jk}$ be the weight that connects neuron $k$ in layer $l$ to neuron $j$ in layer $l-1$, and $w^{l}$ is the vector of weights that connect neurons in layer $l$ to neurons in layer $l-1$ <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>,</p>
+<p>$b^{l}_{j}$ be the bias of layer $l$ for neuron $j$, and $b^{l}$ is the vector of biases in layer $L$</p>
+<p>The relationship between $a^{l}_j$, the activation of neuron $j$ in layer $l$, and the activations of the previous layer, is:</p>
+<p>$$
+\tag{4}
+u = w^{l}_{jk}  \\
+a^{l}_j= \sigma \bigg(\sum_k^{} u  a^{l-1}_k +  b^{l}_j\bigg)
+$$</p>
+<p>In words, the activation of neuron $j$ in layer $l$ is the sigmoid of the weighted sum of the activations of the previous layer.</p>
+<p>Starting with the input, we compute the activations of each hidden layer, until we reach the output layer, layer $L$. At this layer, the activations are converted into the network&rsquo;s final output. Consider the example of determining whether an image of an animal is a cat.</p>
+<p>We can make an output layer of our neural network have a single neuron. If its activation is above a threshold, the final answer is &ldquo;yes.&rdquo; Suppose we want to answer instead the question, &ldquo;is the image a cat, a dog or a giraffe?&rdquo; Then, the final layer could have  three neurons<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. Each neuron corresponds to a species. The neuron with the highest activation becomes the decision of the network.</p>
+<p>This is called &ldquo;forward propagation&rdquo;. A signal, or input, is moved forward through the network.</p>
+<h3 id="how-do-we-train-a-neural-network">How do we train a neural network?</h3>
+<p>We have now shown how a neural network reads in a signal, or input, processes it, and outputs a prediction. The purpose of a neural network is for it to make accurate predictions for unseen examples. To do that, we present the neural network with training data. Specifically, these are a collection of examples $(x,y)$ where $x$ is the input, such as an image, and $y$ is the label, such as the name of the animal depicted by the image. The neural network can be seen as a model that approximates $f(x)$, or the function that maps inputs $x$ to their labels, $y$. To get our neural network as close to $f(x)$ as possible, we define a cost function, $C$, which measures the difference between the network&rsquo;s output and the desired output, $f(x)$. A typical example of a cost function<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> is the mean squared error, or:</p>
+<p>$$
+\tag{5}
+\begin{equation}
+C(w, b, x, y) = \frac{1}{2n}\sum_{j=1}^n\big(y_j - a^{L}_{j}\big)^2
+\end{equation}
+$$</p>
+<p>Here, $C$ depends on four things: $w$ and $b$, the weights and biases in the network, $x$, the inputs, and $y$, the desired outputs. The cost function measures the squared difference between the desired output, $y_j$ and the output of the network, which are the activations of the final layer, $a_j^L$. This notation of the cost function might differ from others; this one is written as an average of the mean squared error cost function for  single examples $x_j$.</p>
+<p>Naturally, we want to make $C$, the difference between the desired and actual outcome, as small as possible. To do so, we can use standard optimization techniques to find the minimizer of the cost function. However, for a neural network, it is not a simple task. The minimizer of $C$ would be the set of weights and biases that make $C$ as small as possible. This requires that we determine how $C$ changes when we change $b$ or $w$ - in other words, $\nabla_{b}C$ and $\nabla_{w}C$.</p>
+<p>Looking at equation 4, we have already established how a single activation $a^{l}_j$ relates to the activations of the previous layer. Plugging in equation \ref{eqn:alj} to $a^{L}_j$, the cost function becomes:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="Figure 1: A scatterplot of Pearson’s father-son pairs, obtained from [3]." src="../../nnets/eqn-6-2.png">
+    </div>
+
+    
+</figure></p>
+<p>We can repeat the substitution for the activations for each layer: $a^{L-1}_k, \dots, a^{2}_k$ to get the cost function in terms of all of the weights and biases in the neural network. Needless to say, it is not a simple task to analytically derive the gradient of $C$ with respect to $w$ and $b$.</p>
+<h3 id="backpropagation-1">Backpropagation</h3>
+<p>Having described backpropogation with words in the first part of the article, we will begin here with the four equations of backpropagation. Some notation: we denote $\delta$ to be the error term of a layer. We also use he Hadamard product, $\odot$, which is element-wise multiplication for vectors. For example,
+$
+\begin{pmatrix}
+3\\
+4\\
+\end{pmatrix}
+\odot
+\begin{pmatrix}
+5\\
+2\\
+\end{pmatrix}
+= \begin{pmatrix}
+15\\
+8\\
+\end{pmatrix}.
+$</p>
+<p>The first equation relates the error of the output layer, $\delta_L$, to what is input into the final layer:
+$$
+\begin{equation}
+\tag{B1}
+\delta^{L} = \nabla_a C \odot \sigma&rsquo;(z^L)
+\end{equation}
+$$
+(B1) states that the error of the output layer, $\delta_L$, is the gradient of the cost function with respect to the activations of the output layer, multiplied elementwise  with the rate of change of $z^L$, the weighted input into the neurons of the final layer $L$. This relates the error of the final layer to what is input into the final layer, or $z^{L} = w^{L}a^{L-1} + b^{L}$ (recall that $\sigma(z^{L}) = a^L$).</p>
+<p>Next,
+$$
+\begin{equation}
+\tag{B2}
+\delta^{l} = ((w^{l+1})^{T} \delta^{l+1}) \odot \sigma&rsquo;(z^l)
+\end{equation}
+$$
+(B2) relates the error of a layer $\delta^l$ to the error of the next layer, $\delta^l+1$. Since we move backwards, we already know $\delta^{l+1}$. We apply the transpose of the weight matrix $(w^{l+1})$, since we are moving backwards through the network. This gives us a notion of error of the output from layer $l$. We then multiply it element-wise by $\sigma&rsquo;(z^l)$, which gives us the error in the weighted input to level $l$.</p>
+<p>We can use (B1) and (B2) to get the error term of each \textit{layer}. Now, we want to compute the error in terms of the weights and biases of each layer. For this, we can use the next two equations:
+$$
+\begin{equation}
+\tag{B3}
+\frac{\partial C}{\partial b^{l}_j} = \delta^{l}_j
+\end{equation}
+$$
+$$
+\begin{equation}
+\tag{B4}
+\frac{\partial C}{\partial w^{l}_jk} = a^{l-1}_j\delta^{l}_j
+\end{equation}
+$$</p>
+<p>Equations (B3) and (B4) relate $\delta^{l}_{j}$, the error term of neuron $j$ in layer $l$, to the rate of change of the cost function with respect to the associated bias term (B3) and weight (B4). With these equations, we have a way to determine by how much to change the biases and weights of the network in order to reduce the error of the cost function.</p>
+<p>So, with these equations defined, we can now present a more detailed version of the Backpropagation Algorithm:</p>
+<ol>
+<li><strong>Input</strong>: training sample into the input layer, obtaining the activation of the first layer, $a^1$</li>
+<li><strong>Feed forward</strong>: For the next levels $l = 2, 3, \dots, L$, compute the weighted sums $z^{l} = w^{l}a^{l-1} + b^{l}$ and the activations $a^l = \sigma(z^l)$</li>
+<li><strong>Compute the error of the network</strong>: compute $\delta^{L} = \nabla_a C \odot \sigma&rsquo;(z^L)$</li>
+<li><strong>Backpropogate the error</strong>: Starting with $L$, for each $l \text{ in } L, L-1, L-2, \dots, 2$, compute \ $\delta^{l} = ((w^{l+1})^{T}\delta^{l+1}) \odot \sigma&rsquo;(z^l)$</li>
+<li><strong>Output</strong>: Using (B3),     $\frac{\partial C}{\partial b^{l}_j} = \delta^{l}_j$ and (B4) $    \frac{\partial C}{\partial w^{l}_jk} = a^{l-1}_j\delta^{l}_j$, we obtain the gradient of the cost function</li>
+</ol>
+<p>To decide how to change the weights and biases, we can combine backpropagation with a gradient-descent learning step:</p>
+<h4 id="algorithm-training-a-neural-network">Algorithm: Training a neural network</h4>
+<ol>
+<li>Begin with a set of training examples $X$. %Input $X = x_1, x_2, \dots$, a set of training inputs</li>
+<li>For each example $x \in X$, set the corresponding activation $a^{x,1}$. Here, the notation $a^{x,1}$ is the activation associated with input $x$ in layer $l$. Perform:<br>
+(a) Feedforward: for layers $l = 2, 3, \dots, L$ compute $z^{x,l}$ and $a^{x,l}$<br>
+(b) Compute the error of the network: $\delta^{x,L} = \nabla_a C \odot \sigma&rsquo;(z^x,L)$<br>
+(c) Backpropogate the error: Starting with layer $L$ and moving backwards, compute $\delta^{x,l} = ((w^{l+1})^{T}\delta^{x,l+1}) \odot \sigma&rsquo;(z^x,l)$</li>
+<li><strong>Gradient Descent</strong>: Starting with layer $L$,<br>
+(a) update the weights according to the gradient descent rule and (B4): $w^{l} \rightarrow w^{l} - \eta \sum_{x} \delta^{x,l}(a^{x,l-1})^T$, where $\eta$ is the learning rate. <br>
+(b) update the biases according to the gradient descent rule and (B3): $b^{l} \rightarrow b^{l} - \eta \sum_{x} \delta^{x,l}$, where $\eta$ is the learning rate.</li>
+</ol>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>While the notation is a bit confusing when looking at a network in the forward direction, it&rsquo;s handy for looking in the backwards direction.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>It does not need to have three neurons - it can have instead two neurons, which can encode up to four final decisions.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>Typical neural network cost functions: <a href="https://stats.stackexchange.com/questions/154879/a-list-of-cost-functions-used-in-neural-networks-alongside-applications">https://stats.stackexchange.com/questions/154879/a-list-of-cost-functions-used-in-neural-networks-alongside-applications</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+    
+  </div>
+
+  
+
+
+  
+
+  
+  
+
+<div class="single-pagination">
+    <hr />
+
+    <div class="flex">
+
+        <div class="single-pagination-prev">
+            
+            <div class="single-pagination-container-prev">
+                <div class="single-pagination-text">←</div>
+                <div class="single-pagination-text">
+                    <a href="/posts/mobility-2020/">
+                        Visualization: European Mobility in 2020
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="single-pagination-next">
+            
+            <div class="single-pagination-container-next">
+                <div class="single-pagination-text">
+                    <a href="/posts/linear-regression/">
+                        Linear Regression
+                    </a>
+                </div>
+                <div class="single-pagination-text">→</div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <hr />
+</div>
+
+
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+      </main>
+    </div>
+
+    <footer>
+      
+
+    
+    <p>Powered by
+        <a href="https://gohugo.io/">Hugo</a>
+        theme based on 
+        <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+    </p>
+    
+    
+    
+
+
+
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+      ]
+    });
+  });
+</script>
+
+
+    </footer>
+    
+  </body>
+
+  <script>
+
+  function isAuto() {
+    return document.body.classList.contains("auto");
+  }
+
+  function setTheme() {
+    if (!isAuto()) {
+      return
+    }
+
+    document.body.classList.remove("auto");
+    let cls = "light";
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      cls = "dark";
+    }
+
+    document.body.classList.add(cls);
+  }
+
+  function invertBody() {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+  }
+
+  if (isAuto()) {
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(invertBody);
+  }
+
+  setTheme();
+
+</script>
+
+</html>

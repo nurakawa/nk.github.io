@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+<link rel="icon" type="image/ico" href="http://localhost:1313//favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313//favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313//android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313//apple-touch-icon.png">
+
+<meta name="description" content="This article presents a brief explanation of artificial neural networks and how they are used for prediction. It presents the material in two ways: first, in plain language without any mathematics; second, in simple language but with some mathematical notation."/>
+
+<title>
+    
+    What is a Neural Network, and how does it work? | Nura Kawa
+    
+</title>
+
+<link rel="canonical" href="http://localhost:1313/neural-networks/"/>
+
+<meta property="og:url" content="http://localhost:1313/neural-networks/">
+  <meta property="og:site_name" content="Nura Kawa">
+  <meta property="og:title" content="What is a Neural Network, and how does it work?">
+  <meta property="og:description" content="This article presents a brief explanation of artificial neural networks and how they are used for prediction. It presents the material in two ways: first, in plain language without any mathematics; second, in simple language but with some mathematical notation.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2024-02-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-02-20T00:00:00+00:00">
+    <meta property="article:tag" content="Database">
+    <meta property="article:tag" content="Java">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.f1ad03b67a5380b14dc1bf13677331e49fdce064e1619b80e8e0b2e90a1685e0.css" media="all">
+
+
+
+
+
+  </head>
+
+  
+
+  
+  
+  
+
+  <body class="light">
+
+    <div class="content">
+      <header>
+        
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">
+        <a href="http://localhost:1313/">Nura Kawa</a>
+    </h1>
+
+    <div class="flex">
+        
+
+        
+        
+      
+        <p class="small ">
+            <a href="/" >
+                /home
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/posts" >
+                /posts
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/about" >
+                /about
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+      </header>
+
+      <main class="main">
+        
+
+
+
+
+
+<div class="breadcrumbs">
+    
+    <a href="/">Home</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a class="breadcrumbs-current" href="/neural-networks/">What is a Neural Network, and how does it work?</a>
+</div>
+
+
+
+<div >
+
+  <div class="single-intro-container">
+
+    
+
+    <h1 class="single-title">What is a Neural Network, and how does it work?</h1>
+    
+    <p class="single-summary">A simple explanation of neural networks: their definition, optimization, and use cases.</p>
+    
+
+    
+
+    <p class="single-readtime">
+      
+      
+      
+      <time datetime="2024-02-20T00:00:00&#43;00:00">February 20, 2024</time>
+      
+
+      
+      &nbsp; · &nbsp;
+      5 min read
+      
+    </p>
+
+  </div>
+
+  
+
+  
+
+  
+  <aside class="toc">
+    <p><strong>Table of contents</strong></p>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#high-level-overview-no-math">High-level overview (no math)</a>
+      <ul>
+        <li><a href="#how-neural-networks-process-information">How neural networks process information</a></li>
+        <li><a href="#how-to-train-a-neural-network">How to train a neural network</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+  
+
+  
+
+  <div class="single-content">
+    <p><em>This blog post presents a brief explanation of artificial neural networks and how they are used for prediction. It presents the material in two ways: first, in plain language without any mathematics; second, in simple language but with some mathematical notation. This is certainly not the only article that introduces neural networks - there are plenty of excellent blog posts, videos and courses on the subject. What we aim to contribute is a way for a reader to learn the main ideas about neural networks without spending time on
+mathematical notation and computing derivatives. After becoming more comfortable with the main ideas, the reader can then move on to the more mathematical explanation, which is heavily based on the style and notation of Nielsen (2018). Additionally, we include a brief discussion on a related, but very important, sub-topic: the scenarios when we would, and would not, want to use a neural network.</em></p>
+<h2 id="high-level-overview-no-math">High-level overview (no math)</h2>
+<p>A neural network is a computing system that is used to model a function that maps a set of inputs to their corresponding outputs. Inputs could be, for instance, peoples’ browsing history on an e-commerce platform, and the outputs could be the probability that each person would click on an advertisement. Or, inputs could be a set of images of animals, and their corresponding outputs could be the answer to the question, “is this image a cat?” A neural network that has been presented with a lot of examples of such inputs will become quite good at recognizing the patterns and get a sense of how inputs relate to outputs. The network can process an input - a list of products a person has viewed online, or an image of an animal - that it has not seen before and, based on what it learned, correctly determine how likely the person would click on an advertisement, or whether an image is of a feline.</p>
+<p>The neural network model is a collection of inter-connected nodes, or neurons, arranged in layers. The first layer is an input layer, which yields a mathematical representation of input of the function. The final layer is an output layer, which yields the output of the neural network, or its prediction. Between the first and final layers are usually at least one “hidden layer”, or layers of interconnected neurons. Figure 1 presents an example of a neural network with two hidden layers.</p>
+<h3 id="how-neural-networks-process-information">How neural networks process information</h3>
+<p>Each individual neuron in a neural network functions as a decision-maker: it reads in bits of information, weights and sums the bits of information, and then outputs a decision. By arranging several neurons into a layer, we can make decisions from multiple inputs. With each layer, the network can make more complicated decisions - decisions that are based on input from the previous layer. That is why neural networks are often designed with several hidden layers - to be able to estimate very complex relationships between input and output. Returning to the cat-recognition example, one can imagine each neuron in the hidden layer of Figure 1 making a decision on the input. The first hidden layer’s neurons could ask “does the image depict a tail?” or “does the animal in the image have a face?”. In the second hidden layer, the questions could be more detailed, such as, “if the animal has a face, does the face have two eyes and a nose and whiskers?”</p>
+<p>A neural network learns by seeing a lot of examples for which we have a desired output. For each example it sees, a network can adjust its decision-making mechanisms. Technically, this means adjusting its neurons’ weights, which represent how much value a neuron given to each input, and its neurons’ biases, which represent by how much individual neurons shift their decisions. The final weights and biases in a network are those that make the total difference between the output of the neural network and the desired output as small as possible. With each example, the network makes an adjustment of its weights and biases. Once the network is trained with a very large number of examples, it can make good predictions for unseen examples.</p>
+<p>So, how exactly do we train a neural network to learn the relationship between input and output ?</p>
+<h3 id="how-to-train-a-neural-network">How to train a neural network</h3>
+<p>When we feed an input into the neural network, we want the network’s output of the neural network to be as close as possible to the desired output - the “ground truth” output associated with the input. So, we can start by expressing the difference between the network’s output and the desired output as a cost function. Then, we can use standard optimization techniques to find the set of weights and biases of the network that minimize the cost function.</p>
+<h4 id="gradient-descent">Gradient Descent</h4>
+<p>A standard way of minimizing a cost function is with gradient descent - we start at a random feasible point and iteratively move in the direction where we decrease the cost function fastest, until we (hopefully) reach a minimum. For neural networks, this means shifting the weights and biases of each neuron in the network, such that the network as a whole has minimal cost. In order to do this, however, we need to be able to determine in what direction to move - this means computing how the cost function changes with respect to all the weights and biases in a network. For large networks, this task is quite challenging! Hence, we use the backpropagation algorithm: a method for computing the change in a neural network’s cost function with respect to each weight and bias in the neuron.</p>
+<h4 id="backpropagation">Backpropagation</h4>
+<p>abc</p>
+
+    
+  </div>
+
+  
+
+
+  
+
+  
+  
+
+<div class="single-pagination">
+    <hr />
+
+    <div class="flex">
+
+        <div class="single-pagination-prev">
+            
+            <div class="single-pagination-container-prev">
+                <div class="single-pagination-text">←</div>
+                <div class="single-pagination-text">
+                    <a href="/about/">
+                        About
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="single-pagination-next">
+            
+        </div>
+
+    </div>
+
+    <hr />
+</div>
+
+
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+      </main>
+    </div>
+
+    <footer>
+      
+
+    
+    <p>Powered by
+        <a href="https://gohugo.io/">Hugo</a>
+        theme based on 
+        <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+    </p>
+    
+    
+    
+
+
+
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+      ]
+    });
+  });
+</script>
+
+
+    </footer>
+    
+  </body>
+
+  <script>
+
+  function isAuto() {
+    return document.body.classList.contains("auto");
+  }
+
+  function setTheme() {
+    if (!isAuto()) {
+      return
+    }
+
+    document.body.classList.remove("auto");
+    let cls = "light";
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      cls = "dark";
+    }
+
+    document.body.classList.add(cls);
+  }
+
+  function invertBody() {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+  }
+
+  if (isAuto()) {
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(invertBody);
+  }
+
+  setTheme();
+
+</script>
+
+</html>

@@ -24,9 +24,9 @@
     </item>
     <item>
       <title>Neural Networks</title>
-      <link>http://localhost:1313/posts/neural-networks/</link>
+      <link>http://localhost:1313/posts/nnets/</link>
       <pubDate>Sun, 20 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/neural-networks/</guid>
+      <guid>http://localhost:1313/posts/nnets/</guid>
       <description>A simple explanation of neural networks: their definition, optimization, and use cases.</description>
     </item>
     <item>
@@ -48,7 +48,7 @@
       <link>http://localhost:1313/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/projects/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Security of AI Systems&lt;/strong&gt;: an in-depth study on the security risks of transfer learning, including backdoor and adversarial attacks; in collaboration with the German Federal Office of Information Security &lt;a href=&#34;https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/Studies/KI/P464_Provision_use_external_data_trained_models.pdf?__blob=publicationFile&amp;amp;v=7&#34;&gt;publication&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;BerDiBa (Berlin Digital Rail Operations)&lt;/strong&gt;: a holistic digital twin for rail operations using innovative signal processing methods and Artificial Intelligence. My work focused on robustness assessment of AI modules in autonomous railway systems.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Localized Classmaps&lt;/strong&gt;: a new Explainable AI method that enables an interpretation of the outputs of classification algorithms. &lt;a href=&#34;https://github.com/nurakawa/localized-classmap&#34;&gt;code&lt;/a&gt;, &lt;a href=&#34;https://medium.com/towards-data-science/explainable-ai-xai-with-class-maps-d0e137a91d2c&#34;&gt;publication&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Some of my past work:&lt;/p&gt;&#xA;&lt;h3 id=&#34;ai-projects&#34;&gt;AI Projects&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Security of AI Systems&lt;/strong&gt;: an in-depth study on the security risks of transfer learning, including backdoor and adversarial attacks; in collaboration with the German Federal Office of Information Security (BSI) &lt;a href=&#34;https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/Studies/KI/P464_Provision_use_external_data_trained_models.pdf?__blob=publicationFile&amp;amp;v=7&#34;&gt;publication&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;BerDiBa (Berlin Digital Rail Operations)&lt;/strong&gt;: a holistic digital twin for rail operations using innovative signal processing methods and Artificial Intelligence. My work focused on robustness assessment of AI modules in autonomous railway systems.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -21,9 +21,8 @@ hideHeader = false
 # Intro on main page, content is markdown
 homeIntroTitle = ''
 homeIntroContent = """
-I am a researcher with a strong foundation in statistics and computer science. I am passionate about leveraging AI to enable __intelligent decision-making__ and to provide __access to reliable information__.
-
-"""
+Hello! I am Nura. I write about what I learn, mostly related to concepts in machine learning. A statistician by training, I am passionate about developing robust ways to test and improve AI reliablity aspects - robustness, explainability, and privacy. 
+""" 
 
 # Collection to display on home
 homeCollectionTitle = 'Posts'
@@ -50,6 +49,10 @@ url = "https://medium.com/@nurakawa"
 name = "github"
 url = "https://github.com/nurakawa"
 
+[[params.social]]
+name = "google scholar"
+url = "https://scholar.google.com/citations?user=EmfBQHAAAAAJ&hl=en"
+
 # Main menu pages
 [[params.menu]]
 name = "home"
@@ -62,10 +65,6 @@ url = "/posts"
 [[params.menu]]
 name = "projects"
 url = "/projects"
-
-[[params.menu]]
-name = "about"
-url = "/about"
 
 # Syntax highligth on code blocks
 [markup]

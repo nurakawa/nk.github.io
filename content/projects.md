@@ -5,7 +5,11 @@ hideBackToTop: true
 hidePaginati__on: true
 ---
 
-- __Security of AI Systems__: an in-depth study on the security risks of transfer learning, including backdoor and adversarial attacks; in collaboration with the German Federal Office of Information Security [publication](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/Studies/KI/P464_Provision_use_external_data_trained_models.pdf?__blob=publicationFile&v=7)
+Some of my past work:
+
+
+### AI Projects
+- __Security of AI Systems__: an in-depth study on the security risks of transfer learning, including backdoor and adversarial attacks; in collaboration with the German Federal Office of Information Security (BSI) [publication](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/Studies/KI/P464_Provision_use_external_data_trained_models.pdf?__blob=publicationFile&v=7)
 
 - __BerDiBa (Berlin Digital Rail Operations)__: a holistic digital twin for rail operations using innovative signal processing methods and Artificial Intelligence. My work focused on robustness assessment of AI modules in autonomous railway systems.   
 
